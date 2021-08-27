@@ -21,6 +21,7 @@
 		"@chakra-ui/react": "^1.6.6",
 		"@emotion/react": "^11",
 		"@emotion/styled": "^11",
+		"@netlify/plugin-nextjs": "^3.8.0",
 		"axios": "^0.21.1",
 		"blurhash": "^1.1.4",
 		"framer-motion": "^4",
