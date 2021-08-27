@@ -23,7 +23,7 @@ export default function Index() {
     <PageLayout title="Amirsina Shadkami - Frontend Developer">
       <PageSlideFade>
         <StaggerChildren>
-          <Flex direction={["column", "column", "row"]}>
+          <Flex direction={["column", "column", "row"]} pt={10} mt={9}>
             <MotionBox p={"1.9rem"} pt={0} pb={0} m="auto" mb={[16, 16, "auto"]}>
               <Avatar
                 size={"3xl"}
