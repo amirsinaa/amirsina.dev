@@ -56,7 +56,7 @@ export default function Index() {
               <Box as="p" mb={2} fontSize="2xl" fontWeight="400" textAlign="left">
                 My name is<Box as="strong" fontWeight="600"> Amirsina Shadkami.</Box>
                 <Box as="p" mt={2} textAlign={["justify"]}>
-                  I&apos;m a{" "} Accomplished Front-end developer with extensive experience in (HTML5, CSS3, JavaScript Vanilla, Vuejs), modern web paradigms  (e.g., PWA, JAMstack) , widely used frameworks and some other various modern web technologies and tools.
+                  I&apos;m an{" "} accomplished Front-end developer with extensive experience in (HTML5, CSS3, JavaScript Vanilla, Vuejs), modern web paradigms  (e.g., PWA, JAMstack) , widely used frameworks and some other various modern web technologies and tools.
                 </Box>
               </Box>
             </MotionBox>
