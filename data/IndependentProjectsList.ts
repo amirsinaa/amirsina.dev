@@ -5,7 +5,7 @@ export const IndependentProjectsList = [
     logo: '/assets/images/projects/midas.png',
     blurHash: "ACSz8iL|v|ks",
     link: "https://mgl.cc/tr/",
-    description: `Midas Global Logistics has been operating in international forwarding for over 15 years and was originally founded in 1996 in Istanbul. Here in Turkey Midas Global Logistics’s activities cover all types of transports to and from any worldwide destination `,
+    description: `Midas Global Logistics has been operating in international forwarding for over 15 years and was originally founded in 1996 in Istanbul.Midas Global Logistics’s activities cover all types of transports to and from any worldwide destination `,
     technologies: ['Angularjs','Sass','Bootstrap',]
   },
   {
