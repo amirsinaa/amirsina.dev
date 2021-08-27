@@ -1,0 +1,44 @@
+{
+	"name": "amirsina.dev",
+	"version": "1.0.0",
+	"description": "www.amirsina.dev app",
+	"author": "Amirsina Shadkami <amirsina23@gmail.com> (https://amirsina.dev)",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/amirsinaa/amirsina.dev"
+	},
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"build-stats": "ANALYZE=true npm run build",
+		"export": "next export -o dist",
+		"build-prod": "run-s clean build export",
+		"clean": "rimraf .next dist",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@chakra-ui/react": "^1.6.6",
+		"@emotion/react": "^11",
+		"@emotion/styled": "^11",
+		"axios": "^0.21.1",
+		"blurhash": "^1.1.4",
+		"framer-motion": "^4",
+		"next": "11.1.0",
+		"react": "17.0.2",
+		"react-blurhash": "^0.1.3",
+		"react-dom": "17.0.2",
+		"react-icons": "^4.2.0",
+		"react-progressive-image": "^0.6.0",
+		"rimraf": "^3.0.2",
+		"use-sound": "^4.0.1"
+	},
+	"devDependencies": {
+		"@types/react": "17.0.19",
+		"@typescript-eslint/eslint-plugin": "^4.29.3",
+		"@typescript-eslint/parser": "^4.29.3",
+		"eslint": "7.32.0",
+		"eslint-config-next": "11.1.0",
+		"typescript": "^4.3.5"
+	}
+}
