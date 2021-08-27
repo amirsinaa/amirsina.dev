@@ -1,5 +1,5 @@
 import * as React from "react";
-import { SkillsCollection } from "data/SkillsCollection";
+import { SkillsCollection } from "../data/SkillsCollection";
 import { MotionBox } from "../components/UserInterfaceUtilities/motion";
 import Skills from "../components/Skills";
 import {

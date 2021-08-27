@@ -1,5 +1,5 @@
 import * as React from "react";
-import { IndependentProjectsList } from "data/IndependentProjectsList";
+import { IndependentProjectsList } from "../data/IndependentProjectsList";
 import { MotionBox } from "../components/UserInterfaceUtilities/motion";
 import Projects from "../components/Projects";
 import {

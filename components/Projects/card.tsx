@@ -73,9 +73,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                   {title}
                 </Text>
               </HStack>
-          {/* <HStack pt={4} columns={[4]} spacing={0.5}>
-
-          </HStack> */}
             </motion.div>
             <AnimatePresence>
               <motion.div
