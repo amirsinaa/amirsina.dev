@@ -20,10 +20,10 @@ import {
   CardTransition
 } from "../components/UserInterfaceUtilities/PageTransitions";
 import { MotionBox } from "../components/UserInterfaceUtilities/motion";
-import { CompaniesCollection } from "data/CompaniesCollection";
-import { EducationFacilities } from "data/EducationFacilities";
-import { PublishedArticlesCollectionEnglish } from "data/PublishedArticlesCollectionEnglish";
-import { PublishedArticlesCollectionPersian } from "data/PublishedArticlesCollectionPersian";
+import { CompaniesCollection } from "../data/CompaniesCollection";
+import { EducationFacilities } from "../data/EducationFacilities";
+import { PublishedArticlesCollectionEnglish } from "../data/PublishedArticlesCollectionEnglish";
+import { PublishedArticlesCollectionPersian } from "../data/PublishedArticlesCollectionPersian";
 import NextLink from 'next/link';
 import PageLayout from "../components/AppSkeleton/PageLayout";
 
