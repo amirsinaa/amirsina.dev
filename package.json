@@ -10,18 +10,12 @@
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
-		"start": "next start",
-		"build-stats": "ANALYZE=true npm run build",
-		"export": "next export -o dist",
-		"build-prod": "run-s clean build export",
-		"clean": "rimraf .next dist",
-		"lint": "next lint"
+		"export": "next export"
 	},
 	"dependencies": {
 		"@chakra-ui/react": "^1.6.6",
 		"@emotion/react": "^11",
 		"@emotion/styled": "^11",
-		"@netlify/plugin-nextjs": "^3.8.0",
 		"axios": "^0.21.1",
 		"blurhash": "^1.1.4",
 		"framer-motion": "^4",
@@ -31,7 +25,6 @@
 		"react-dom": "17.0.2",
 		"react-icons": "^4.2.0",
 		"react-progressive-image": "^0.6.0",
-		"rimraf": "^3.0.2",
 		"use-sound": "^4.0.1"
 	},
 	"devDependencies": {
