@@ -16,7 +16,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
             <MotionBox whileHover={{ y: -4.5, scale: 1.01 }} key={index}>
               <ProjectCard
                 title={project.title}
-                description={project.desc}
+                description={project.description}
                 blurHash={project.blurHash}
                 logo={project.logo}
                 link={project.link}
