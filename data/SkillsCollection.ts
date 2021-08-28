@@ -85,9 +85,9 @@ export const SkillsCollection = [
     image: '/assets/images/skills/jquery.png'
   },
   {
-    name: "Javascript",
-    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-    image: '/assets/images/skills/javascript.png'
+    name: "PostCss",
+    link: "https://postcss.org/",
+    image: '/assets/images/skills/pcss.png'
   },
   {
     name: "Jamstack",
