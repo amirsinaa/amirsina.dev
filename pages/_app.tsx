@@ -1,14 +1,14 @@
 import { useEffect } from "react";
-import App, { AppProps } from "next/app";
+import { AppProps } from "next/app";
 import { ChakraProvider, Box } from "@chakra-ui/react";
-import AppLayout from "../components/AppSkeleton/AppLayout";
 import { theme } from "../components/UserInterfaceUtilities/theme";
+import AppLayout from "../components/AppSkeleton/AppLayout";
 
 import { useRouter } from "next/router";
 import * as gtag from "lib/gtag";
 import { AnimatePresence } from "framer-motion";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function AmirsinaDotDevPortfolio({ Component, pageProps }: AppProps) {
   const router = useRouter();
   useEffect(() => {
     const handleRouteChange = url => {
@@ -37,8 +37,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-MyApp.getInitialProps = async appContext => {
-  const appProps = await App.getInitialProps(appContext);
-  return { ...appProps };
-};
-export default MyApp;
+export default AmirsinaDotDevPortfolio;
