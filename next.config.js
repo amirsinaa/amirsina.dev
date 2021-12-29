@@ -1,4 +1,5 @@
 module.exports = {
+  swcMinify: true,
 	webpack: (config, { isServer }) => {
 		if (!isServer) {
 			config.resolve.fallback.fs = false
