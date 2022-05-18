@@ -1,5 +1,5 @@
 import { SlideFade } from "@chakra-ui/react";
-import { MotionBox } from "./motion";
+import { MotionBox } from "./ChakraFactory";
 
 const staggerVariants = {
   initial: {
@@ -81,6 +81,14 @@ export const item = {
     opacity: 1
   }
 };
+
+
+export const PageLayoutFramerMotionAnimateObjectVariants = {
+  hidden: { opacity: 0, x: -210, y: 0 },
+  enter: { opacity: 1, x: 0, y: 0 },
+  exit: { opacity: 0, x: 0, y: -115 }
+};
+
 
 export const PageSlideFade = ({ children }) => {
   return <SlideFade in>{children}</SlideFade>;
