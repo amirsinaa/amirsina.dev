@@ -34,6 +34,9 @@
 		"@typescript-eslint/parser": "^5.8.1",
 		"eslint": "8.5.0",
 		"eslint-config-next": "12.0.7",
-		"typescript": "^4.5.4"
+		"typescript": "^4.5.4",
+		"cors": "^2.8.5",
+		"express": "^4.18.0",
+		"ts-node": "^10.4.0"
 	}
 }
