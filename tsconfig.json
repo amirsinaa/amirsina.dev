@@ -1,56 +1,41 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
+    "jsxImportSource": "@emotion/react",
     "skipLibCheck": true,
     "strict": false,
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
+    "strictBindCallApply": false,
+    "strictNullChecks": false,
+    "strictFunctionTypes": false,
+    "strictPropertyInitialization": false,
+    "alwaysStrict": false,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
     "baseUrl": ".",
+    "jsx": "preserve",
+    "types": ["cypress"],
     "paths": {
-      "*": [
-        "/*"
-      ],
-      "components/*": [
-        "components/*"
-      ],
-      "lib/*": [
-        "lib/*"
-      ],
-      "data/*": [
-        "data/*"
-      ],
-      "pages/*": [
-        "pages/*"
-      ],
-      "config/*": [
-        "config/*"
-      ],
-      "public/*": [
-        "public/*"
-      ]
+      "@/lib/*": ["./lib/*"],
+      "@/pages/*": ["./pages/*"],
+      "@/components/*": ["./components/*"],
+      "@/hooks/*": ["./hooks/*"],
+      "@/configs/*": ["./configs/*"],
+      "@/types/*": ["types/*"],
+      "@/services/*": ["./services/*"],
+      "@/data/*": ["./data/*"],
+      "@/public/*": ["./public/*"]
     },
     "incremental": true
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.js",
-    "**/*.jsx",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "configs/index.js"]
 }
