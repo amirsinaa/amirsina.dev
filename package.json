@@ -8,7 +8,7 @@
 		"url": "https://github.com/amirsinaa/amirsina.dev"
 	},
 	"scripts": {
-		"dev": "next dev",
+		"dev": "ts-node --project tsconfig.server.json server/dev.ts",
 		"build": "next build",
 		"export": "next export"
 	},
