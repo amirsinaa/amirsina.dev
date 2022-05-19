@@ -1,23 +1,18 @@
-import {
-  useColorMode,
-  useColorModeValue,
-  IconButtonProps
-} from "@chakra-ui/react";
-import useSound from "use-sound";
+import { useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { ColorModeSwitcherProps } from "@/types/UiParts";
 import { AnimatePresence } from "framer-motion";
-import { MotionBox } from "./motion";
-
-type ColorModeSwitcherProps = Omit<IconButtonProps, "aria-label">;
+import { MotionBox } from "./ChakraFactory";
+import useSound from "use-sound";
 
 export const ColorModeSwitcher: React.FC<ColorModeSwitcherProps> = props => {
   const { toggleColorMode } = useColorMode();
   const mode = useColorModeValue("dark", "light");
 
   const [play] = useSound("/assets/audios/ui-handler-amirsina-voice.mp3", {
-    volume: 0.09,
+    volume: 0.1,
     sprite: {
       on: [0, 500],
-      off: [0, 400]
+      off: [0, 500]
     }
   });
 
