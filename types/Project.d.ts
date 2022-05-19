@@ -1,4 +1,4 @@
-type project = {
+export interface ProjectInterface {
   id: number;
   title: string;
   logo: string;
@@ -8,9 +8,6 @@ type project = {
   technologies: string[];
 };
 
-type skill = {
-  name: string;
-  link: string;
-  image: string;
-  type: string;
-};
+export default interface ProjectsProps {
+  projects: ProjectInterface[];
+}
