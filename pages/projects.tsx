@@ -1,7 +1,7 @@
 import * as React from "react";
-import { IndependentProjectsList } from "../data/IndependentProjectsList";
-import { MotionBox } from "../components/UserInterfaceUtilities/motion";
-import Projects from "../components/Projects";
+import { IndependentProjectsList } from "@/data/IndependentProjectsList";
+import { MotionBox } from "@/components/UserInterfaceUtilities/ChakraFactory";
+import Projects from "@/components/Projects";
 import {
   Box,
   Stack,
@@ -12,8 +12,8 @@ import { BsCodeSlash } from "react-icons/bs";
 import {
   PageSlideFade,
   StaggerChildren
-} from "components/UserInterfaceUtilities/PageTransitions";
-import PageLayout from "../components/AppSkeleton/PageLayout";
+} from "@/components/UserInterfaceUtilities/Transitions";
+import PageLayout from "@/components/AppSkeleton/PageLayout";
 
 const ProjectsPage = ({ projects }) => {
   return (
