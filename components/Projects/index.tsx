@@ -1,11 +1,9 @@
-import { VStack, SimpleGrid, Box } from "@chakra-ui/react";
-import ProjectCard from "./card";
+import { MotionBox } from "@/components/UserInterfaceUtilities/ChakraFactory";
+import { VStack, SimpleGrid } from "@chakra-ui/react";
 import { AnimateSharedLayout } from "framer-motion";
-import { MotionBox } from "../UserInterfaceUtilities/motion";
+import ProjectsProps from "@/types/Project";
+import ProjectCard from "./ProjectCard";
 
-interface ProjectsProps {
-  projects: project[];
-}
 
 const Projects: React.FC<ProjectsProps> = ({ projects }) => {
   return (

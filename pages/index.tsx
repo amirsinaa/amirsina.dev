@@ -8,15 +8,15 @@ import {
   Link,
   Box
 } from "@chakra-ui/react";
-import { MotionBox } from "../components/UserInterfaceUtilities/motion";
-import NextLink from 'next/link';
-import { VscPerson } from "react-icons/vsc"
-import { BsWrench, BsCodeSlash } from "react-icons/bs";
+import { MotionBox } from "@/components/UserInterfaceUtilities/ChakraFactory";
 import {
   PageSlideFade,
   StaggerChildren,
-} from "../components/UserInterfaceUtilities/PageTransitions";
-import PageLayout from "../components/AppSkeleton/PageLayout";
+} from "@/components/UserInterfaceUtilities/Transitions";
+import PageLayout from "@/components/AppSkeleton/PageLayout";
+import { BsWrench, BsCodeSlash } from "react-icons/bs";
+import { VscPerson } from "react-icons/vsc"
+import NextLink from 'next/link';
 
 export default function Index() {
   return (
