@@ -1,24 +1,12 @@
-import { useEffect } from "react";
-import { AppProps } from "next/app";
+import { theme } from "@/components/UserInterfaceUtilities/Theme";
+import AppLayout from "@/components/AppSkeleton/AppLayout";
 import { ChakraProvider, Box } from "@chakra-ui/react";
-import { theme } from "../components/UserInterfaceUtilities/theme";
-import AppLayout from "../components/AppSkeleton/AppLayout";
-
-import { useRouter } from "next/router";
-import * as gtag from "lib/gtag";
 import { AnimatePresence } from "framer-motion";
+import { useRouter } from "next/router";
+import { AppProps } from "next/app";
 
-function AmirsinaDotDevPortfolio({ Component, pageProps }: AppProps) {
+function Application({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  useEffect(() => {
-    const handleRouteChange = url => {
-      gtag.pageview(url);
-    };
-    router.events.on("routeChangeComplete", handleRouteChange);
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router.events]);
 
   return (
     <ChakraProvider theme={theme} resetCSS={true}>
@@ -37,4 +25,4 @@ function AmirsinaDotDevPortfolio({ Component, pageProps }: AppProps) {
   );
 }
 
-export default AmirsinaDotDevPortfolio;
+export default Application;
