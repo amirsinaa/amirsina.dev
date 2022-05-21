@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 
-const siteConfig = {
+const SiteConfig = {
   copyright: `Copyright © ${new Date().getFullYear()} Amirsina Shadkami. All Rights Reserved.`,
   author: {
     name: "Amirsina Shadkami",
@@ -47,4 +47,4 @@ const siteConfig = {
   }
 };
 
-export default siteConfig;
+export default SiteConfig;
