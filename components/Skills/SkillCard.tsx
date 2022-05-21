@@ -8,17 +8,13 @@ import {
   Link,
   Image
 } from "@chakra-ui/react";
-import { MotionBox } from "../UserInterfaceUtilities/motion";
-import { item } from "../UserInterfaceUtilities/PageTransitions";
+import { MotionBox } from "@/components/UserInterfaceUtilities/ChakraFactory";
+import { item } from "@/components/UserInterfaceUtilities/Transitions";
 import NextLink from 'next/link';
+import SkillsCardProps from "@/types/SkillsCardProps";
 
-interface CardProps {
-  name: string;
-  link: string;
-  image: string;
-}
 
-const Card: React.FC<CardProps> = ({
+const SkillCard: React.FC<SkillsCardProps> = ({
   name,
   link,
   image, }) => {
@@ -85,4 +81,4 @@ const Card: React.FC<CardProps> = ({
   );
 };
 
-export default Card;
+export default SkillCard;
