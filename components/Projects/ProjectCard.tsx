@@ -1,4 +1,4 @@
-import * as React from "react";
+
 import {
   HStack,
   VStack,
@@ -7,18 +7,11 @@ import {
   Tag,
   Link
 } from "@chakra-ui/react";
+import { assignTechTagColor } from "@/components/UserInterfaceUtilities/Theme";
+import LazyImage from "@/components/UserInterfaceUtilities/LazyImage";
 import { motion, AnimatePresence } from "framer-motion";
-import { assignTechTagColor } from "../UserInterfaceUtilities/theme";
-import LazyImage from "../UserInterfaceUtilities/LazyImage";
-
-interface ProjectCardProps {
-  title: string;
-  description: string;
-  logo: string;
-  blurHash: string;
-  link: string;
-  technologies: string[];
-}
+import ProjectCardProps from "@/types/ProjectCardProps";
+import { useState } from "react";
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
@@ -29,7 +22,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   technologies
 }) => {
   const textColor = useColorModeValue("gray.500", "gray.200");
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const toggleOpen = () => setIsOpen(!isOpen);
 
   return (
@@ -106,9 +99,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 )}
               </motion.div>
             </AnimatePresence>
-            <HStack pt={2} display={{ sm: "none" , md:"flex"}}>
+            <HStack pt={2} display={{ sm: "none", md: "flex" }}>
               {technologies.map((tech, index) => (
-                <Tag key={index} size="sm" fontWeight="bold" m={["0px","0px","5px"]} colorScheme={assignTechTagColor(tech)}>
+                <Tag key={index} size="sm" fontWeight="bold" m={["0px", "0px", "5px"]} colorScheme={assignTechTagColor(tech)}>
                   {tech}
                 </Tag>
               ))}
