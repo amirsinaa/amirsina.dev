@@ -7,7 +7,7 @@ import {
   useColorModeValue,
   Flex
 } from "@chakra-ui/react";
-import siteConfig from "../../configs/site-config";
+import SiteConfig from "@/configs/index";
 
 const iconProps = {
   variant: "ghost",
@@ -43,7 +43,7 @@ const Footer = () => {
           © {new Date().getFullYear()} Amirsina Shadkami{" "}
         </Text>
         <Box textAlign="center">
-          {siteConfig.author.accounts.map((sc, index) => (
+          {SiteConfig.author.accounts.map((sc, index) => (
             <IconButton
               key={index}
               as={Link}
