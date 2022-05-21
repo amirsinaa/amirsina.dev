@@ -1,3 +1,4 @@
+import { MotionBox } from "@/components/UserInterfaceUtilities/ChakraFactory";
 import {
   Box,
   Stack,
@@ -14,21 +15,20 @@ import {
   useColorMode,
   useColorModeValue
 } from "@chakra-ui/react";
-import { FaGraduationCap } from "react-icons/fa";
-import { RiArticleLine } from "react-icons/ri";
-import { BsFillBriefcaseFill, BsStarFill } from "react-icons/bs";
 import {
   PageSlideFade,
   StaggerChildren,
   CardTransition
-} from "../components/UserInterfaceUtilities/PageTransitions";
-import { MotionBox } from "../components/UserInterfaceUtilities/motion";
-import { CompaniesCollection } from "../data/CompaniesCollection";
-import { EducationFacilities } from "../data/EducationFacilities";
-import { PublishedArticlesCollectionEnglish } from "../data/PublishedArticlesCollectionEnglish";
-import { PublishedArticlesCollectionPersian } from "../data/PublishedArticlesCollectionPersian";
+} from "@/components/UserInterfaceUtilities/Transitions";
+import { PublishedArticlesCollectionEnglish } from "@/data/PublishedArticlesCollectionEnglish";
+import { PublishedArticlesCollectionPersian } from "@/data/PublishedArticlesCollectionPersian";
+import { CompaniesCollection } from "@/data/CompaniesCollection";
+import { EducationFacilities } from "@/data/EducationFacilities";
+import { BsFillBriefcaseFill, BsStarFill } from "react-icons/bs";
+import PageLayout from "@/components/AppSkeleton/PageLayout";
+import { FaGraduationCap } from "react-icons/fa";
+import { RiArticleLine } from "react-icons/ri";
 import NextLink from 'next/link';
-import PageLayout from "../components/AppSkeleton/PageLayout";
 
 interface CardProps {
   title: string;
