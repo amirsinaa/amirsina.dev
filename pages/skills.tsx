@@ -1,19 +1,19 @@
-import * as React from "react";
-import { SkillsCollection } from "../data/SkillsCollection";
-import { MotionBox } from "../components/UserInterfaceUtilities/motion";
-import Skills from "../components/Skills";
 import {
   Box,
   Stack,
   Heading,
   Flex
 } from "@chakra-ui/react";
-import { BsWrench } from "react-icons/bs";
 import {
   PageSlideFade,
   StaggerChildren
-} from "components/UserInterfaceUtilities/PageTransitions";
-import PageLayout from "../components/AppSkeleton/PageLayout";
+} from "@/components/UserInterfaceUtilities/Transitions";
+import { MotionBox } from "@/components/UserInterfaceUtilities/ChakraFactory";
+import PageLayout from "@/components/AppSkeleton/PageLayout";
+import { SkillsCollection } from "@/data/SkillsCollection";
+import { BsWrench } from "react-icons/bs";
+import Skills from "@/components/Skills";
+
 
 const ProjectsPage = ({ skills }) => {
   return (
