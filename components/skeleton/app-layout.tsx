@@ -32,7 +32,7 @@ function AppLayout(props) {
         py="0.2em"
         className="color-mode-handler"
       >
-        <ColorModeSwitcher justifySelf="flex-end" />
+        <ColorModeSwitcher />
       </Box>
       <Footer />
     </Fragment>
