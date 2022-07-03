@@ -1,9 +1,9 @@
-import { ColorModeSwitcher } from "@/components/UserInterfaceUtilities/ColorModeSwitcher";
+import ColorModeSwitcher from "@/components/user-interface-utilities/color-mode-switcher";
 import { Box , useColorModeValue } from "@chakra-ui/react";
 import { useRouter } from 'next/router'
-import NavbarMenu from "./NavbarMenu";
+import NavbarMenu from "./navbar-menu";
 import { Fragment } from "react";
-import Footer from "./Footer";
+import Footer from "./footer";
 
 function AppLayout(props) {
   const router = useRouter()

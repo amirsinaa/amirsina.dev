@@ -9,8 +9,8 @@ import {
 } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
-import { MenuLinks } from "@/data/MenuLinks"
-import NavbarLink from './NavbarLink'
+import { MenuLinks } from "@/data/menu-links"
+import NavbarLink from './navbar-link'
 
 export default function NavbarMenu() {
   const { isOpen, onOpen, onClose } = useDisclosure();

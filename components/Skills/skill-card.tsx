@@ -8,16 +8,16 @@ import {
   Link,
   Image
 } from "@chakra-ui/react";
-import { MotionBox } from "@/components/UserInterfaceUtilities/ChakraFactory";
-import { item } from "@/components/UserInterfaceUtilities/Transitions";
+import { MotionBox } from "@/components/user-interface-utilities/chakra-factory";
+import { item } from "@/components/user-interface-utilities/transitions";
+import SkillsCardProps from "@/types/skills-card"
 import NextLink from 'next/link';
-import SkillsCardProps from "@/types/SkillsCardProps";
 
 
-const SkillCard: React.FC<SkillsCardProps> = ({
+const SkillCard = ({
   name,
   link,
-  image, }) => {
+  image }: SkillsCardProps) => {
 
   return (
     <MotionBox variants={item}>
@@ -57,7 +57,6 @@ const SkillCard: React.FC<SkillsCardProps> = ({
                   height={50}
                   objectFit="contain"
                   width={50}
-                  layout="fixed"
                 />
               </Box>
               <VStack

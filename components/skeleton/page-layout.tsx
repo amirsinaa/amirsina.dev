@@ -1,8 +1,8 @@
 
-import { PageLayoutFramerMotionAnimateObjectVariants } from "@/components/UserInterfaceUtilities/Transitions"
-import PageLayoutProps from "@/types/PageLayoutProps"
+import { PageLayoutFramerMotionAnimateObjectVariants } from "@/components/user-interface-utilities/transitions"
+import PageLayoutProps from "@/types/page-layout"
 import { motion } from "framer-motion";
-import Meta from "./Meta";
+import Meta from "@/components/skeleton/meta"
 
 const PageLayout = ({
   children,

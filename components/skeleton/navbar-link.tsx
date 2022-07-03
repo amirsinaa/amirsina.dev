@@ -3,7 +3,7 @@ import {
   useColorModeValue
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { NavbarLinkProps } from "@/types/NavbarLinkProps"
+import { NavbarLinkProps } from "@/types/navbar"
 
 export default function NavbarLink (props: NavbarLinkProps) {
   return (

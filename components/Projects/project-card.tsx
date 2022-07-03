@@ -5,22 +5,21 @@ import {
   Text,
   useColorModeValue,
   Tag,
+  Image,
   Link
 } from "@chakra-ui/react";
-import { assignTechTagColor } from "@/components/UserInterfaceUtilities/Theme";
-import ImageBox from "@/components/UserInterfaceUtilities/ImageBox"
+import { assignTechTagColor } from "@/components/user-interface-utilities/theme";
 import { motion, AnimatePresence } from "framer-motion";
-import ProjectCardProps from "@/types/ProjectCardProps";
+import ProjectCardProps from "@/types/project-card";
 import { useState } from "react";
 
-const ProjectCard: React.FC<ProjectCardProps> = ({
+const ProjectCard = ({
   title,
   description,
   logo,
-  blurHash,
   link,
   technologies
-}) => {
+}: ProjectCardProps) => {
   const textColor = useColorModeValue("gray.500", "gray.200");
   const [isOpen, setIsOpen] = useState(false);
   const toggleOpen = () => setIsOpen(!isOpen);
@@ -41,10 +40,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         cursor="pointer"
         _hover={{ shadow: "lg" }}
       >
-        <ImageBox
+        <Image
           src={logo}
           sizes="md"
           width={100}
+          objectFit="contain"
           height={100}
           rounded="sm"
         />
