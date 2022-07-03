@@ -1,7 +1,6 @@
-import * as React from "react";
-import { IndependentProjectsList } from "@/data/IndependentProjectsList";
-import { MotionBox } from "@/components/UserInterfaceUtilities/ChakraFactory";
-import Projects from "@/components/Projects";
+import { IndependentProjectsListData } from "@/data/independent-projects-list-data";
+import { MotionBox } from "@/components/user-interface-utilities/chakra-factory";
+import Projects from "@/components/projects";
 import {
   Box,
   Stack,
@@ -12,8 +11,8 @@ import { BsCodeSlash } from "react-icons/bs";
 import {
   PageSlideFade,
   StaggerChildren
-} from "@/components/UserInterfaceUtilities/Transitions";
-import PageLayout from "@/components/AppSkeleton/PageLayout";
+} from "@/components/user-interface-utilities/transitions";
+import PageLayout from "@/components/skeleton/page-layout";
 
 const ProjectsPage = ({ projects }) => {
   return (
@@ -49,7 +48,7 @@ const ProjectsPage = ({ projects }) => {
 };
 
 export function getStaticProps() {
-  const projects = IndependentProjectsList;
+  const projects = IndependentProjectsListData;
   return {
     props: {
       projects

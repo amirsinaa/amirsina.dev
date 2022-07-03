@@ -7,12 +7,12 @@ import {
 import {
   PageSlideFade,
   StaggerChildren
-} from "@/components/UserInterfaceUtilities/Transitions";
-import { MotionBox } from "@/components/UserInterfaceUtilities/ChakraFactory";
-import PageLayout from "@/components/AppSkeleton/PageLayout";
-import { SkillsCollection } from "@/data/SkillsCollection";
+} from "@/components/user-interface-utilities/transitions";
+import { MotionBox } from "@/components/user-interface-utilities/chakra-factory";
+import PageLayout from "@/components/skeleton/page-layout";
+import { SkillsCollection } from "@/data/skills-data";
 import { BsWrench } from "react-icons/bs";
-import Skills from "@/components/Skills";
+import Skills from "@/components/skills";
 
 
 const ProjectsPage = ({ skills }) => {
