@@ -26,7 +26,13 @@ import { RiArticleLine } from "react-icons/ri";
 import NextLink from 'next/link';
 import Card from "@/components/user-interface-utilities/card";
 
-const About = ({ CompaniesData, EducationFacilitiesData, EnglishPublishedArticlesData, PersianPublishedArticlesData }) => {
+const About = ({
+  companies,
+  education,
+  enArticles,
+  faArticles
+}) => {
+
   const { colorMode } = useColorMode();
 
   return (
@@ -241,12 +247,16 @@ const About = ({ CompaniesData, EducationFacilitiesData, EnglishPublishedArticle
 };
 
 export function getStaticProps() {
+  const companies = CompaniesData;
+  const education = EducationFacilitiesData;
+  const enArticles = EnglishPublishedArticlesData;
+  const faArticles = PersianPublishedArticlesData;
   return {
     props: {
-      CompaniesData,
-      EducationFacilitiesData,
-      EnglishPublishedArticlesData,
-      PersianPublishedArticlesData
+      companies,
+      education,
+      enArticles,
+      faArticles
     }
   };
 }
