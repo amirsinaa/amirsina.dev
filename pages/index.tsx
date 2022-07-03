@@ -1,4 +1,3 @@
-import * as React from "react";
 import {
   Flex,
   Button,
@@ -8,15 +7,15 @@ import {
   Link,
   Box
 } from "@chakra-ui/react";
-import { MotionBox } from "@/components/UserInterfaceUtilities/ChakraFactory";
+import { MotionBox } from "@/components/user-interface-utilities/chakra-factory";
 import {
   PageSlideFade,
   StaggerChildren,
-} from "@/components/UserInterfaceUtilities/Transitions";
-import PageLayout from "@/components/AppSkeleton/PageLayout";
+} from "@/components/user-interface-utilities/transitions";
+import AnimatedButton from "@/components/user-interface-utilities/animated-button";
+import PageLayout from "@/components/skeleton/page-layout";
 import { BsWrench, BsCodeSlash } from "react-icons/bs";
 import { VscPerson } from "react-icons/vsc"
-import NextLink from 'next/link';
 
 export default function Index() {
   return (
@@ -27,7 +26,7 @@ export default function Index() {
             <MotionBox p={"1.9rem"} pt={0} pb={0} m="auto" mb={[16, 16, "auto"]}>
               <Avatar
                 size={"3xl"}
-                src={"https://avatars.githubusercontent.com/u/20769213?v=4"}
+                src={""}
               />
             </MotionBox>
             <MotionBox
@@ -51,122 +50,43 @@ export default function Index() {
               }}
             >
               <Box as="p" fontSize="2xl" fontWeight="400" textAlign="left" mt={1} mb={2.5}>
-                <Box as="strong" fontWeight="600">Hi !</Box>
+                Hi !
               </Box>
               <Box as="p" mb={2} fontSize="2xl" fontWeight="400" textAlign="left">
-                My name is<Box as="strong" fontWeight="600"> Amirsina Shadkami.</Box>
-                <Box as="p" mt={2} textAlign={["justify"]}>
-                  I&apos;m an{" "} accomplished Front-end developer with extensive experience in (HTML5, CSS3, JavaScript Vanilla, Vuejs), modern web paradigms  (e.g., PWA, JAMstack) , widely used frameworks and some other various modern web technologies and tools.
-                </Box>
+                My name is Amirsina Shadkami.
+              </Box>
+              <Box as="p" mt={2} textAlign={["justify"]}>
+                I&apos;m an{" "} accomplished Front-end developer with extensive experience in (HTML5, CSS3, JavaScript Vanilla, Vuejs), modern web paradigms  (e.g., PWA, JAMstack) , widely used frameworks and some other various modern web technologies and tools.
               </Box>
             </MotionBox>
           </Flex>
           <Flex direction={["column", "column", "row"]} justify="center" mt={10}>
             <Center>
               <Stack spacing={4} direction={["column", "row"]}>
-                <MotionBox
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  opacity="0"
-                  justify="center"
-                  initial={{
-                    opacity: 0,
-                    translateY: 150
-                  }}
-                  animate={{
-                    opacity: 1,
-                    translateY: 0,
-                    transition: {
-                      duration: 0.6
-                    }
-                  }}
-                >
-                  <NextLink href={"/about"} passHref>
-                    <Link>
-                      <Button
-                        leftIcon={<VscPerson />}
-                        colorScheme="green"
-                        variant="solid"
-                        minW="250px"
-                        fontWeight="bold"
-                        _hover={{
-                          bg: "darkgreen"
-                        }}
-                      >
-                        More About me
-                      </Button>
-                    </Link>
-                  </NextLink>
-                </MotionBox>
-                <MotionBox
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  opacity="0"
-                  justify="center"
-                  initial={{
-                    opacity: 0,
-                    translateY: 150
-                  }}
-                  animate={{
-                    opacity: 1,
-                    translateY: 0,
-                    transition: {
-                      duration: 0.7
-                    }
-                  }}
-                >
-                  <NextLink href={"/projects"} passHref>
-                    <Link>
-                      <Button
-                        leftIcon={<BsCodeSlash />}
-                        colorScheme="orange"
-                        variant="solid"
-                        minW="250px"
-                        fontWeight="bold"
-                        _hover={{
-                          bg: "orangered"
-                        }}
-                      >
-                        Projects
-                      </Button>
-                    </Link>
-                  </NextLink>
-                </MotionBox>
-                <MotionBox
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  opacity="0"
-                  justify="center"
-                  initial={{
-                    opacity: 0,
-                    translateY: 150
-                  }}
-                  animate={{
-                    opacity: 1,
-                    translateY: 0,
-                    transition: {
-                      duration: 0.8
-                    }
-                  }}
-                >
-
-                  <NextLink href={"/skills"} passHref>
-                    <Link>
-                      <Button
-                        leftIcon={<BsWrench />}
-                        colorScheme="blue"
-                        variant="solid"
-                        minW="250px"
-                        fontWeight="bold"
-                        _hover={{
-                          bg: "skyblue"
-                        }}
-                      >
-                        Skills
-                      </Button>
-                    </Link>
-                  </NextLink>
-                </MotionBox>
+                <AnimatedButton
+                  link="/about"
+                  icon={<VscPerson />}
+                  background="green"
+                  hoverBackground="darkgreen"
+                  width="250px"
+                  text="More About me"
+                />
+                <AnimatedButton
+                  link="/skills"
+                  icon={<BsWrench />}
+                  background="blue"
+                  hoverBackground="skyblue"
+                  width="250px"
+                  text="My Skills"
+                />
+                <AnimatedButton
+                  link="/projects"
+                  icon={<BsCodeSlash />}
+                  background="orange"
+                  hoverBackground="orangered"
+                  width="250px"
+                  text="Projects"
+                />
               </Stack>
             </Center>
           </Flex>
