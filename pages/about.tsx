@@ -1,4 +1,3 @@
-import { MotionBox } from "@/components/user-interface-utilities/chakra-factory";
 import {
   Box,
   Stack,
@@ -42,18 +41,16 @@ const About = ({ CompaniesData, EducationFacilitiesData, EnglishPublishedArticle
             w={["90%", "100%", "100%"]}
             px={["0", "0", "2rem"]}
           >
-            <MotionBox>
-              <Heading>
-                <Flex alignItems="center">
-                  <Stack pl={3}>
-                    <Box as={BsFillBriefcaseFill} size="25px" />
-                  </Stack>
-                  <Box as="strong" fontWeight="600" mx={ 1 }>
-                    Career
-                  </Box>
-                </Flex>
-              </Heading>
-            </MotionBox>
+            <Heading>
+              <Flex alignItems="center">
+                <Stack pl={3}>
+                  <Box as={BsFillBriefcaseFill} size="25px" />
+                </Stack>
+                <Box as="strong" fontWeight="600" mx={ 1 }>
+                  Career
+                </Box>
+              </Flex>
+            </Heading>
             <VStack
               spacing={4}
               marginBottom={6}
@@ -62,9 +59,8 @@ const About = ({ CompaniesData, EducationFacilitiesData, EnglishPublishedArticle
               mt={12}
             >
               {CompaniesData.map((company) => (
-                <MotionBox whileHover={{ y: -6, shadow: "lg" }} key={company.id}>
+                <Box key={company.id}>
                   <Card
-                    key={company.id}
                     title={company.title}
                     role={company.role}
                     period={company.period}
@@ -82,15 +78,13 @@ const About = ({ CompaniesData, EducationFacilitiesData, EnglishPublishedArticle
                       ACACO is a custom software development and consulting company focusing on web and mobile software development. In this company, many projects have been done in different fields, most of which have been done by the following two main systems, and I have participated in them.
                     </Box>
                     {company.projects.map((project) => (
-                      <MotionBox mt={3} mb={3} whileHover={{ y: -6, shadow: "lg" }} key={project.id}>
-                        <Card
-                          key={project.id}
-                          title={project.title}
-                          description={project.description}
-                          logo={project.logo}
-                          colorMode={colorMode}
-                        />
-                      </MotionBox>
+                      <Card
+                        key={project.id}
+                        title={project.title}
+                        description={project.description}
+                        logo={project.logo}
+                        colorMode={colorMode}
+                      />
                     ))}
                     <Box
                       as="p"
@@ -127,7 +121,7 @@ const About = ({ CompaniesData, EducationFacilitiesData, EnglishPublishedArticle
                       </ListItem>
                     </List>
                   </Box>
-                </MotionBox>
+                </Box>
               ))}
             </VStack>
             <Heading>
@@ -148,15 +142,13 @@ const About = ({ CompaniesData, EducationFacilitiesData, EnglishPublishedArticle
               mt={12}
             >
               {EducationFacilitiesData.map((institute) => (
-                <MotionBox whileHover={{ y: -6, shadow: "lg" }} key={institute.id}>
-                  <Card
-                    key={institute.id}
-                    title={institute.title}
-                    role={institute.role}
-                    logo={institute.logo}
-                    colorMode={colorMode}
-                  />
-                </MotionBox>
+                <Card
+                  key={institute.id}
+                  title={institute.title}
+                  role={institute.role}
+                  logo={institute.logo}
+                  colorMode={colorMode}
+                />
               ))}
             </VStack>
             <Heading>
@@ -187,23 +179,21 @@ const About = ({ CompaniesData, EducationFacilitiesData, EnglishPublishedArticle
                 mt={8}
               >
                 {EnglishPublishedArticlesData.map((enArticleItem) => (
-                  <MotionBox whileHover={{ y: -6, shadow: "lg" }} key={enArticleItem.id}>
-                    <Card
-                      key={enArticleItem.id}
-                      title={enArticleItem.title}
-                      colorMode={colorMode}
-                    >
-                      {enArticleItem.readFrom.map((enArticleItemReadFrom) => (
-                        <NextLink key={enArticleItemReadFrom.id} href={enArticleItemReadFrom.articleLink} passHref>
-                          <Link isExternal>
-                            <Tag size="sm" fontWeight="bold" m={["0px", "0px", "5px"]}>
-                              Read from : {enArticleItemReadFrom.articleSource}
-                            </Tag>
-                          </Link>
-                        </NextLink>
-                      ))}
-                    </Card>
-                  </MotionBox>
+                  <Card
+                    key={enArticleItem.id}
+                    title={enArticleItem.title}
+                    colorMode={colorMode}
+                  >
+                    {enArticleItem.readFrom.map((enArticleItemReadFrom) => (
+                      <NextLink key={enArticleItemReadFrom.id} href={enArticleItemReadFrom.articleLink} passHref>
+                        <Link isExternal>
+                          <Tag size="sm" fontWeight="bold" m={["0px", "0px", "5px"]}>
+                            Read from : {enArticleItemReadFrom.articleSource}
+                          </Tag>
+                        </Link>
+                      </NextLink>
+                    ))}
+                  </Card>
                 ))}
               </VStack>
             </Box>
@@ -225,23 +215,21 @@ const About = ({ CompaniesData, EducationFacilitiesData, EnglishPublishedArticle
                 mt={8}
               >
                 {PersianPublishedArticlesData.map((faArticleItem) => (
-                  <MotionBox whileHover={{ y: -6, shadow: "lg" }} key={faArticleItem.id}>
-                    <Card
-                      key={faArticleItem.id}
-                      title={faArticleItem.title}
-                      colorMode={colorMode}
-                    >
-                      {faArticleItem.readFrom.map((faArticleItemReadFrom) => (
-                        <NextLink key={faArticleItemReadFrom.id} href={faArticleItemReadFrom.articleLink} passHref>
-                          <Link isExternal>
-                            <Tag size="sm" fontWeight="bold" m={["0px", "0px", "5px"]}>
-                              Read from : {faArticleItemReadFrom.articleSource}
-                            </Tag>
-                          </Link>
-                        </NextLink>
-                      ))}
-                    </Card>
-                  </MotionBox>
+                  <Card
+                    key={faArticleItem.id}
+                    title={faArticleItem.title}
+                    colorMode={colorMode}
+                  >
+                    {faArticleItem.readFrom.map((faArticleItemReadFrom) => (
+                      <NextLink key={faArticleItemReadFrom.id} href={faArticleItemReadFrom.articleLink} passHref>
+                        <Link isExternal>
+                          <Tag size="sm" fontWeight="bold" m={["0px", "0px", "5px"]}>
+                            Read from : {faArticleItemReadFrom.articleSource}
+                          </Tag>
+                        </Link>
+                      </NextLink>
+                    ))}
+                  </Card>
                 ))}
               </VStack>
             </Box>
