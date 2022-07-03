@@ -1,3 +1,8 @@
+export interface Technologies {
+  id: number;
+  name: string;
+}
+
 export interface ProjectInterface {
   id: number;
   title: string;
@@ -5,7 +10,7 @@ export interface ProjectInterface {
   link: string;
   description: string;
   blurHash: string;
-  technologies: string[];
+  technologies: Technologies[];
 };
 
 export default interface ProjectsProps {
