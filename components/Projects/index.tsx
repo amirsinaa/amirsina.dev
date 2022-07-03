@@ -1,21 +1,20 @@
-import { MotionBox } from "@/components/UserInterfaceUtilities/ChakraFactory";
+import { MotionBox } from "@/components/user-interface-utilities/chakra-factory";
 import { VStack, SimpleGrid } from "@chakra-ui/react";
-import { AnimateSharedLayout } from "framer-motion";
-import ProjectsProps from "@/types/Project";
-import ProjectCard from "./ProjectCard";
+import { LayoutGroup } from "framer-motion";
+import ProjectsProps from "@/types/project";
+import ProjectCard from "./project-card";
 
 
-const Projects: React.FC<ProjectsProps> = ({ projects }) => {
+const Projects = ({ projects }: ProjectsProps) => {
   return (
     <VStack mx={2} align="start" spacing={8}>
-      <AnimateSharedLayout>
+      <LayoutGroup>
         <SimpleGrid columns={1} spacing={4} mt={5} w="100%">
-          {projects.map((project, index) => (
-            <MotionBox whileHover={{ y: -4.5, scale: 1.01 }} key={index}>
+          {projects.map((project) => (
+            <MotionBox whileHover={{ y: -4.5, scale: 1.01 }} key={project.id}>
               <ProjectCard
                 title={project.title}
                 description={project.description}
-                blurHash={project.blurHash}
                 logo={project.logo}
                 link={project.link}
                 technologies={project.technologies}
@@ -23,7 +22,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
             </MotionBox>
           ))}
         </SimpleGrid>
-      </AnimateSharedLayout>
+      </LayoutGroup>
     </VStack>
   );
 };

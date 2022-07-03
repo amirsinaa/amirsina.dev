@@ -4,13 +4,13 @@ import {
   Box,
   SimpleGrid
 } from "@chakra-ui/react";
-import { MotionBox } from "@/components/UserInterfaceUtilities/ChakraFactory";
-import { container } from "@/components/UserInterfaceUtilities/Transitions";
+import { MotionBox } from "@/components/user-interface-utilities/chakra-factory";
+import { container } from "@/components/user-interface-utilities/transitions";
 import { useState, useEffect } from "react";
-import SkillsProps from "@/types/Skill";
-import SkillCard from "./SkillCard";
+import SkillsProps from "@/types/skill";
+import SkillCard from "./skill-card";
 
-const Skills: React.FC<SkillsProps> = ({ skills }) => {
+const Skills = ({ skills }: SkillsProps) => {
   const [skillsList, setSkillsList] = useState([]);
 
   useEffect(() => {
@@ -40,9 +40,9 @@ const Skills: React.FC<SkillsProps> = ({ skills }) => {
               animate="visible"
             >
               <SimpleGrid columns={[2, 2, 3, 3, 4]} spacing={4} mt={8}>
-                {skillsList.map((tool, index) => (
+                {skillsList.map((tool) => (
                   <SkillCard
-                    key={index}
+                    key={tool.id}
                     name={tool.name}
                     image={tool.image}
                     link={tool.link}

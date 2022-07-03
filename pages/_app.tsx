@@ -1,5 +1,5 @@
-import { theme } from "@/components/UserInterfaceUtilities/Theme";
-import AppLayout from "@/components/AppSkeleton/AppLayout";
+import { theme } from "@/components/user-interface-utilities/theme";
+import AppLayout from "@/components/skeleton/app-layout";
 import { ChakraProvider, Box } from "@chakra-ui/react";
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
