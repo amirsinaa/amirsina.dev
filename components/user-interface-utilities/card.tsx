@@ -7,83 +7,94 @@ import {
   Image,
   useColorModeValue
 } from "@chakra-ui/react";
+import { MotionBox } from "@/components/user-interface-utilities/chakra-factory";
 import { CardTransition } from "@/components/user-interface-utilities/transitions";
 import CardProps from "@/types/card-props";
 
 const Card = (props: CardProps) => {
-  const { title, role, description, period, logo, colorMode, alt, children } = props;
+  const {
+    description,
+    colorMode,
+    children,
+    period,
+    title,
+    role,
+    logo,
+    alt
+  } = props;
   return (
     <CardTransition>
-      <Box
-        px={4}
-        py={5}
-        borderWidth="1px"
-        _hover={{ shadow: "lg" }}
-        bg={useColorModeValue("white", "gray.800")}
-        position="relative"
-        rounded="md"
-      >
-        <Flex justifyContent="space-between">
-          <Flex>
-            {logo && (
-              <Image
-                rounded="full"
-                w={16}
-                h={16}
-                objectFit="contain"
-                fallbackSrc={"/assets/images/image_default_placeholder.png"}
-                src={logo}
-                alt={alt}
-              />
-            )}
-            <Stack spacing={2} pl={3} align="left">
-              <Heading
-                fontSize="xl"
-                as="h3"
-                textAlign="left"
-                color={`mode.${colorMode}.career.text`}
-              >
-                {title}
-              </Heading>
-              {role && (
+      <MotionBox whileHover={{ y: -6 }}>
+        <Box
+          px={4}
+          py={5}
+          borderWidth="1px"
+          bg={useColorModeValue("white", "gray.800")}
+          position="relative"
+          rounded="md"
+        >
+          <Flex justifyContent="space-between">
+            <Flex>
+              {logo && (
+                <Image
+                  rounded="full"
+                  w={16}
+                  h={16}
+                  objectFit="contain"
+                  fallbackSrc={"/assets/images/image_default_placeholder.png"}
+                  src={logo}
+                  alt={alt}
+                />
+              )}
+              <Stack spacing={2} pl={3} align="left" justifyContent='center'>
                 <Heading
-                  fontSize="sm"
-                  as="h4"
+                  fontWeight="bold"
+                  fontSize="md"
+                  as="h3"
                   textAlign="left"
-                  color={`mode.${colorMode}.career.subtext`}
+                  color={`mode.${colorMode}.career.text`}
                 >
-                  {role}
+                  {title}
                 </Heading>
-              )}
-              {description && (
+                {role && (
+                  <Heading
+                    fontSize="sm"
+                    as="h4"
+                    textAlign="left"
+                    color={`mode.${colorMode}.career.subtext`}
+                  >
+                    {role}
+                  </Heading>
+                )}
+                {description && (
+                  <Text
+                    fontSize="sm"
+                    textAlign='left'
+                    color={colorMode}
+                    noOfLines={{ base: 2 }}
+                  >
+                    {description}
+                  </Text>
+                )}
                 <Box
-                  as="p"
                   textAlign="left"
                   fontSize="sm"
                   color={`mode.${colorMode}.career.subtext`}
                 >
-                  {description}
+                  {children}
                 </Box>
+              </Stack>
+            </Flex>
+            {period && (
+              <Stack display={["none", "none", "flex", "flex"]}>
+              <Text fontSize={14} color={`mode.${colorMode}.career.subtext`}>
+                {period}
+              </Text>
+              </Stack>
               )}
-              <Box
-                as="p"
-                textAlign="left"
-                fontSize="sm"
-                color={`mode.${colorMode}.career.subtext`}
-              >
-                {children}
-              </Box>
-            </Stack>
           </Flex>
-          {period && (
-            <Stack display={["none", "none", "flex", "flex"]}>
-            <Text fontSize={14} color={`mode.${colorMode}.career.subtext`}>
-              {period}
-            </Text>
-            </Stack>
-            )}
-        </Flex>
-      </Box>
+        </Box>
+      </MotionBox>
     </CardTransition>
   );
 };
