@@ -1,22 +1,19 @@
 import {
   VStack,
   Center,
+  Link,
   Box,
-  SimpleGrid
+  SimpleGrid,
+  useColorMode
 } from "@chakra-ui/react";
 import { MotionBox } from "@/components/user-interface-utilities/chakra-factory";
 import { container } from "@/components/user-interface-utilities/transitions";
-import { useState, useEffect } from "react";
+import Card from "@/components/user-interface-utilities/card";
 import SkillsProps from "@/types/skill";
-import SkillCard from "./skill-card";
+import NextLink from 'next/link';
 
 const Skills = ({ skills }: SkillsProps) => {
-  const [skillsList, setSkillsList] = useState([]);
-
-  useEffect(() => {
-    setSkillsList(skills);
-  }, []);
-
+  const { colorMode } = useColorMode();
   return (
     <Box
       textAlign="center"
@@ -40,13 +37,16 @@ const Skills = ({ skills }: SkillsProps) => {
               animate="visible"
             >
               <SimpleGrid columns={[2, 2, 3, 3, 4]} spacing={4} mt={8}>
-                {skillsList.map((tool) => (
-                  <SkillCard
-                    key={tool.id}
-                    name={tool.name}
-                    image={tool.image}
-                    link={tool.link}
-                  />
+                {skills.map((tool) => (
+                  <NextLink href={tool.link} passHref key={tool.id}>
+                    <Link isExternal>
+                      <Card
+                        title={tool.name}
+                        logo={tool.image}
+                        colorMode={colorMode}
+                      />
+                    </Link>
+                  </NextLink>
                 ))}
               </SimpleGrid>
             </MotionBox>
