@@ -149,7 +149,7 @@ export const theme = extendTheme({
 
 
 export const assignTechTagColor = type => {
-  type = type.toLowerCase()
+  type = type.name.toLowerCase()
   switch (type) {
     case "angularjs":
       return "red";
