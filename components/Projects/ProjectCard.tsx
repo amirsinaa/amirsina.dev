@@ -8,7 +8,7 @@ import {
   Link
 } from "@chakra-ui/react";
 import { assignTechTagColor } from "@/components/UserInterfaceUtilities/Theme";
-import LazyImage from "@/components/UserInterfaceUtilities/LazyImage";
+import ImageBox from "@/components/UserInterfaceUtilities/ImageBox"
 import { motion, AnimatePresence } from "framer-motion";
 import ProjectCardProps from "@/types/ProjectCardProps";
 import { useState } from "react";
@@ -41,13 +41,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         cursor="pointer"
         _hover={{ shadow: "lg" }}
       >
-        <LazyImage
+        <ImageBox
           src={logo}
-          blurHash={blurHash}
-          size="md"
+          sizes="md"
           width={100}
           height={100}
-          layout="fixed"
           rounded="sm"
         />
         <VStack align="start" justify="flex-start" onClick={toggleOpen}>
