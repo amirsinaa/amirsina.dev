@@ -1,18 +1,18 @@
-import { IndependentProjectsListData } from "@/data/independent-projects-list-data";
-import { MotionBox } from "@/components/user-interface-utilities/chakra-factory";
-import Projects from "@/components/projects";
+import { IndependentProjectsListData } from "@/data/independent-projects-list-data"
+import { MotionBox } from "@/components/user-interface-utilities/chakra-factory"
+import Projects from "@/components/projects"
 import {
   Box,
   Stack,
   Heading,
   Flex
-} from "@chakra-ui/react";
-import { BsCodeSlash } from "react-icons/bs";
+} from "@chakra-ui/react"
+import { BsCodeSlash } from "react-icons/bs"
 import {
   PageSlideFade,
   StaggerChildren
-} from "@/components/user-interface-utilities/transitions";
-import PageLayout from "@/components/skeleton/page-layout";
+} from "@/components/user-interface-utilities/transitions"
+import PageLayout from "@/components/skeleton/page-layout"
 
 const ProjectsPage = ({ projects }) => {
   return (
@@ -44,16 +44,16 @@ const ProjectsPage = ({ projects }) => {
         </StaggerChildren>
       </PageSlideFade>
     </PageLayout>
-  );
-};
+  )
+}
 
 export function getStaticProps() {
-  const projects = IndependentProjectsListData;
+  const projects = IndependentProjectsListData
   return {
     props: {
       projects
     }
-  };
+  }
 }
 
-export default ProjectsPage;
+export default ProjectsPage
