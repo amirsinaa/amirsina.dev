@@ -1,58 +1,55 @@
 import {
-  Box,
-  Stack,
-  VStack,
-  Heading,
-  Tag,
-  Flex,
-  Link,
-  List,
+  useColorMode,
   ListItem,
   ListIcon,
-  useColorMode,
-} from "@chakra-ui/react";
+  Heading,
+  VStack,
+  Stack,
+  Flex,
+  List,
+  Box,
+} from '@chakra-ui/react'
 import {
   PageSlideFade,
   StaggerChildren
-} from "@/components/user-interface-utilities/transitions";
-import { EnglishPublishedArticlesData } from "@/data/english-published-articles-data";
-import { PersianPublishedArticlesData } from "@/data/persian-published-articles-data";
-import { CompaniesData } from "@/data/companies-data";
-import { EducationFacilitiesData } from "@/data/education-facilities-data";
-import { BsFillBriefcaseFill, BsStarFill } from "react-icons/bs";
-import PageLayout from "@/components/skeleton/page-layout";
-import { FaGraduationCap } from "react-icons/fa";
-import { RiArticleLine } from "react-icons/ri";
-import NextLink from 'next/link';
-import Card from "@/components/user-interface-utilities/card";
+} from '@/components/user-interface-utilities/transitions'
+import { EnglishPublishedArticlesData } from '@/data/english-published-articles-data'
+import AnimatedButton from '@/components/user-interface-utilities/animated-button'
+import { PersianPublishedArticlesData } from '@/data/persian-published-articles-data'
+import { CompaniesData } from '@/data/companies-data'
+import { EducationFacilitiesData } from '@/data/education-facilities-data'
+import { BsFillBriefcaseFill, BsStarFill } from 'react-icons/bs'
+import PageLayout from '@/components/skeleton/page-layout'
+import { FaGraduationCap } from 'react-icons/fa'
+import { RiArticleLine } from 'react-icons/ri'
+import { VscBook } from 'react-icons/vsc'
+import Card from '@/components/user-interface-utilities/card'
 
 const About = ({
   companies,
-  education,
-  enArticles,
-  faArticles
+  education
 }) => {
 
-  const { colorMode } = useColorMode();
+  const { colorMode } = useColorMode()
 
   return (
     <PageLayout
-      title="About"
-      description="My educational and professional information"
+      title='About'
+      description='My educational and professional information'
     >
       <PageSlideFade>
         <StaggerChildren>
           <Box
-            m={["auto", "initial"]}
-            w={["90%", "100%", "100%"]}
-            px={["0", "0", "2rem"]}
+            m={['auto', 'initial']}
+            w={['90%', '100%', '100%']}
+            px={['0', '0', '2rem']}
           >
             <Heading>
-              <Flex alignItems="center">
+              <Flex alignItems='center'>
                 <Stack pl={3}>
-                  <Box as={BsFillBriefcaseFill} size="25px" />
+                  <Box as={BsFillBriefcaseFill} size='25px' />
                 </Stack>
-                <Box as="strong" fontWeight="600" mx={ 1 }>
+                <Box as='strong' fontWeight='600' mx={1}>
                   Career
                 </Box>
               </Flex>
@@ -60,11 +57,11 @@ const About = ({
             <VStack
               spacing={4}
               marginBottom={6}
-              align="left"
+              align='left'
               mx={[0, 0, 3]}
               mt={12}
             >
-              {CompaniesData.map((company) => (
+              {companies.map((company) => (
                 <Box key={company.id}>
                   <Card
                     title={company.title}
@@ -75,10 +72,10 @@ const About = ({
                   />
                   <Box mr={7} ml={7}>
                     <Box
-                      as="p"
-                      textAlign="justify"
+                      as='p'
+                      textAlign='justify'
                       mb={10}
-                      fontSize="lg"
+                      fontSize='lg'
                       color={`mode.${colorMode}.career.subtext`}
                     >
                       ACACO is a custom software development and consulting company focusing on web and mobile software development. In this company, many projects have been done in different fields, most of which have been done by the following two main systems, and I have participated in them.
@@ -93,17 +90,17 @@ const About = ({
                       />
                     ))}
                     <Box
-                      as="p"
-                      textAlign="justify"
+                      as='p'
+                      textAlign='justify'
                       mb={10}
-                      fontSize="lg"
+                      fontSize='lg'
                       color={`mode.${colorMode}.career.subtext`}
                     >
                       During my career at ACA, I faced many different challenges and issues that resulted in learning new technologies and expanding my technical knowledge. Some of these challenges were:
                     </Box>
-                    <List textAlign="justify"
+                    <List textAlign='justify'
                       mb={10}
-                      fontSize="lg"
+                      fontSize='lg'
                       color={`mode.${colorMode}.career.subtext`}>
                       <ListItem mb={10}>
                         <ListIcon p={0} mb={1} as={BsStarFill} />
@@ -131,23 +128,23 @@ const About = ({
               ))}
             </VStack>
             <Heading>
-              <Flex alignItems="center">
-                <Box as="strong" fontWeight="600">
+              <Flex alignItems='center'>
+                <Box as='strong' fontWeight='600'>
                   Education
                 </Box>
                 <Stack pl={3}>
-                  <Box as={FaGraduationCap} size="25px" />
+                  <Box as={FaGraduationCap} size='25px' />
                 </Stack>
               </Flex>
             </Heading>
             <VStack
               spacing={4}
               marginBottom={6}
-              align="left"
+              align='left'
               mx={[0, 0, 6]}
               mt={12}
             >
-              {EducationFacilitiesData.map((institute) => (
+              {education.map((institute) => (
                 <Card
                   key={institute.id}
                   title={institute.title}
@@ -158,99 +155,110 @@ const About = ({
               ))}
             </VStack>
             <Heading>
-              <Flex alignItems="center">
-                <Box as="strong" fontWeight="600">
+              <Flex alignItems='center'>
+                <Box as='strong' fontWeight='600'>
                   Articles
                 </Box>
                 <Stack pl={3}>
-                  <Box as={RiArticleLine} size="25px" />
+                  <Box as={RiArticleLine} size='25px' />
                 </Stack>
               </Flex>
             </Heading>
-            <Box
-              m={["auto", "initial"]}
-              px={["0", "0", "1rem"]}
-              pt={["2.5rem"]}
+            <Flex
+              p='50px 0'
+              w='100%'
+              alignItems='center'
+              justifyContent='center'
             >
-              <Box as="span">
-                <Flex alignItems="center">
-                  English
-                </Flex>
-              </Box>
-              <VStack
-                spacing={1}
-                marginBottom={6}
-                align="left"
-                mx={[0, 0, 6]}
-                mt={8}
+              <Box
+                bg='gray.50'
+                boxShadow='md'
+                borderRadius='xl'
+                w='100%'
+                _dark={{
+                  bg: 'gray.800',
+                }}
               >
-                {EnglishPublishedArticlesData.map((enArticleItem) => (
-                  <Card
-                    key={enArticleItem.id}
-                    title={enArticleItem.title}
-                    colorMode={colorMode}
+                <Box
+                  w='100%'
+                  mx='auto'
+                  py={{
+                    base: 12,
+                    lg: 16,
+                  }}
+                  px={{
+                    base: 4,
+                    lg: 8,
+                  }}
+                  display={{
+                    lg: 'flex',
+                  }}
+                  alignItems={{
+                    lg: 'center',
+                  }}
+                  justifyContent={{
+                    lg: 'space-between',
+                  }}
+                >
+                  <Box as='h2'
+                    fontSize={{
+                      base: '3xl',
+                      sm: '4xl',
+                    }}
+                    fontWeight='extrabold'
+                    letterSpacing='tight'
+                    lineHeight='shorter'
+                    color='gray.900'
+                    _dark={{
+                      color: 'gray.100',
+                    }}
                   >
-                    {enArticleItem.readFrom.map((enArticleItemReadFrom) => (
-                      <NextLink key={enArticleItemReadFrom.id} href={enArticleItemReadFrom.articleLink} passHref>
-                        <Link isExternal>
-                          <Tag size="sm" fontWeight="bold" m={["0px", "0px", "5px"]}>
-                            Read from : {enArticleItemReadFrom.articleSource}
-                          </Tag>
-                        </Link>
-                      </NextLink>
-                    ))}
-                  </Card>
-                ))}
-              </VStack>
-            </Box>
-            <Box
-              m={["auto", "initial"]}
-              px={["0", "0", "1rem"]}
-              pt={["0rem"]}
-            >
-              <Box as="span">
-                <Flex alignItems="center">
-                  Persian
-                </Flex>
+                    <Box as='span' display='block'>Check my latest articles</Box>
+                  </Box>
+                  <Stack
+                    direction={{
+                      base: 'column',
+                      sm: 'row',
+                    }}
+                    mt={{
+                      base: 8,
+                      lg: 0,
+                    }}
+                    flexShrink={{
+                      lg: 0,
+                    }}
+                  >
+                    <AnimatedButton
+                      link='/blog'
+                      icon={<VscBook />}
+                      background='pink'
+                      hoverBackground='gray'
+                      text='English'
+                    />
+                    <AnimatedButton
+                      link='/blog'
+                      icon={<VscBook />}
+                      background='purple'
+                      hoverBackground='gray'
+                      text='Persian'
+                    />
+                  </Stack>
+                </Box>
               </Box>
-              <VStack
-                spacing={1}
-                marginBottom={6}
-                align="left"
-                mx={[0, 0, 6]}
-                mt={8}
-              >
-                {PersianPublishedArticlesData.map((faArticleItem) => (
-                  <Card
-                    key={faArticleItem.id}
-                    title={faArticleItem.title}
-                    colorMode={colorMode}
-                  >
-                    {faArticleItem.readFrom.map((faArticleItemReadFrom) => (
-                      <NextLink key={faArticleItemReadFrom.id} href={faArticleItemReadFrom.articleLink} passHref>
-                        <Link isExternal>
-                          <Tag size="sm" fontWeight="bold" m={["0px", "0px", "5px"]}>
-                            Read from : {faArticleItemReadFrom.articleSource}
-                          </Tag>
-                        </Link>
-                      </NextLink>
-                    ))}
-                  </Card>
-                ))}
-              </VStack>
-            </Box>
+            </Flex>
+
           </Box>
         </StaggerChildren>
       </PageSlideFade>
     </PageLayout>
-  );
-};
+  )
+}
 
 export function getStaticProps() {
-  const companies = CompaniesData;
-  const education = EducationFacilitiesData;
-  const enArticles = EnglishPublishedArticlesData;
-  const faArticles = PersianPublishedArticlesData;
+  const companies = CompaniesData
+  const education = EducationFacilitiesData
+  const enArticles = EnglishPublishedArticlesData
+  const faArticles = PersianPublishedArticlesData
   return {
     props: {
       companies,
@@ -258,7 +266,7 @@ export function getStaticProps() {
       enArticles,
       faArticles
     }
-  };
+  }
 }
 
-export default About;
+export default About
