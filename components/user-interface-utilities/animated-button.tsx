@@ -1,10 +1,9 @@
 import {
-  Button,
-  Link
-} from "@chakra-ui/react";
+  Button
+} from '@chakra-ui/react'
 import AnimatedButtonProps from '@/types/animated-button-props'
-import { MotionBox } from "@/components/user-interface-utilities/chakra-factory";
-import NextLink from 'next/link';
+import { MotionBox } from '@/components/user-interface-utilities/chakra-factory'
+import Link from 'next/link'
 
 
 const AnimatedButton = (props: AnimatedButtonProps) => {
@@ -13,8 +12,8 @@ const AnimatedButton = (props: AnimatedButtonProps) => {
     <MotionBox
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
-      opacity="0"
-      justify="center"
+      opacity='0'
+      justify='center'
       initial={{
         opacity: 0,
         translateY: 150
@@ -27,24 +26,22 @@ const AnimatedButton = (props: AnimatedButtonProps) => {
         }
       }}
     >
-      <NextLink href={link} passHref>
-        <Link>
-          <Button
-            leftIcon={icon}
-            colorScheme={background}
-            variant="solid"
-            minW={width}
-            fontWeight="bold"
-            _hover={{
-              bg: hoverBackground
-            }}
-          >
-            { text }
-          </Button>
-        </Link>
-      </NextLink>
+      <Link href={link}>
+        <Button
+          leftIcon={icon}
+          colorScheme={background ?? 'gray'}
+          variant='solid'
+          minW={width ?? 'fit-content'}
+          fontWeight='bold'
+          _hover={{
+            bg: hoverBackground
+          }}
+        >
+          {text}
+        </Button>
+      </Link>
     </MotionBox>
-  );
+  )
 }
 
-export default AnimatedButton;
+export default AnimatedButton
