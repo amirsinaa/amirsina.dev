@@ -1,6 +1,6 @@
 export type MetaInfo = {
-  title: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-};
+  title: string
+  description?: string
+  keywords?: string
+  image?: string
+}

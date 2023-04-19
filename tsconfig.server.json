@@ -1,9 +1,9 @@
 {
-  "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "module": "commonjs",
-    "outDir": "dist",
-    "noEmit": false
+  'extends': './tsconfig.json',
+  'compilerOptions': {
+    'module': 'commonjs',
+    'outDir': 'dist',
+    'noEmit': false
   },
-  "include": ["server/**/*.ts", "next.config.js"]
+  'include': ['server/**/*.ts', 'next.config.js']
 }

@@ -1,3 +1,3 @@
-import { IconButtonProps } from "@chakra-ui/react";
+import { IconButtonProps } from '@chakra-ui/react'
 
-export type ColorModeSwitcherProps = Omit<IconButtonProps, "aria-label">;
+export type ColorModeSwitcherProps = Omit<IconButtonProps, 'aria-label'>
