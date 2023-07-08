@@ -13,8 +13,10 @@ import CardProps from '@/types/card-props'
 
 const Card = (props: CardProps) => {
   const {
+    bg = useColorModeValue('yellowish.100', 'gray.800'),
+    logoSize = ['10', '10'],
+    color = 'white',
     description,
-    colorMode,
     children,
     period,
     title,
@@ -28,10 +30,10 @@ const Card = (props: CardProps) => {
         <Box
           px={4}
           py={5}
-          my={4}
-          bg={useColorModeValue('white', 'gray.800')}
+          my={1}
+          bg={bg}
           position='relative'
-          borderRadius='xl'
+          borderRadius='3xl'
           boxShadow='md'
           rounded='md'
         >
@@ -39,9 +41,8 @@ const Card = (props: CardProps) => {
             <Flex>
               {logo && (
                 <Image
-                  rounded='full'
-                  w={16}
-                  h={16}
+                  w={parseInt(logoSize[0])}
+                  h={parseInt(logoSize[1])}
                   objectFit='contain'
                   fallbackSrc={'/assets/images/image_default_placeholder.png'}
                   src={logo}
@@ -50,11 +51,11 @@ const Card = (props: CardProps) => {
               )}
               <Stack spacing={2} pl={3} align='left' justifyContent='center'>
                 <Heading
-                  fontWeight='bold'
+                  fontWeight='bolder'
                   fontSize='md'
                   as='h3'
                   textAlign='left'
-                  color={`mode.${colorMode}.career.text`}
+                  color={color}
                 >
                   {title}
                 </Heading>
@@ -63,7 +64,7 @@ const Card = (props: CardProps) => {
                     fontSize='sm'
                     as='h4'
                     textAlign='left'
-                    color={`mode.${colorMode}.career.subtext`}
+                    color={color}
                   >
                     {role}
                   </Heading>
@@ -72,7 +73,7 @@ const Card = (props: CardProps) => {
                   <Text
                     fontSize='sm'
                     textAlign='left'
-                    color={colorMode}
+                    color={color}
                     noOfLines={{ base: 2 }}
                   >
                     {description}
@@ -81,7 +82,7 @@ const Card = (props: CardProps) => {
                 <Box
                   textAlign='left'
                   fontSize='sm'
-                  color={`mode.${colorMode}.career.subtext`}
+                  color={color}
                 >
                   {children}
                 </Box>
@@ -89,7 +90,7 @@ const Card = (props: CardProps) => {
             </Flex>
             {period && (
               <Stack display={['none', 'none', 'flex', 'flex']}>
-                <Text fontSize={14} color={`mode.${colorMode}.career.subtext`}>
+                <Text fontSize={14} color={color}>
                   {period}
                 </Text>
               </Stack>
