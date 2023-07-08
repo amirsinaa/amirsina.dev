@@ -9,18 +9,19 @@ export const theme = extendTheme({
     global: (props) => ({
       body: {
         color: mode('gray.600', 'whiteAlpha.800')(props),
-        bg: mode('gray.100', 'gray.900')(props),
+        bg: mode('bodyBackground.100', 'bodyBackground.900')(props),
         fontSize: '1.2em',
       },
       a: {
-        color: mode('green.800', 'green.600')(props),
+        color: mode('yellowish.100', 'yellowish.100')(props),
         transition: 'color 0.25s',
         transitionTimingFunction: 'ease-out',
         fontWeight: '500',
-        _hover: {
-          color: mode('green.600', 'green.300')(props),
-        },
       },
+      span: {
+        transition: 'color 0.25s, background 0.25s',
+        transitionTimingFunction: 'ease-out',
+      }
     }),
   },
   components: {
@@ -54,13 +55,10 @@ export const theme = extendTheme({
       },
       variants: {
         text: {
-          color: 'green.400',
+          color: 'yellowish.100',
           transition: 'color 0.15s',
           transitionTimingFunction: 'ease-out',
           fontWeight: '500',
-          _hover: {
-            color: 'green.300',
-          },
         },
       },
     },
@@ -73,6 +71,16 @@ export const theme = extendTheme({
       100: '#000',
       200: '#ffffff',
       800: '#ffffff'
+    },
+    bodyBackground: {
+      100: '#ffffff',
+      900: '#000000'
+    },
+    deepBlueSea: {
+      100: '#14213d'
+    },
+    yellowish: {
+      100: '#fca311',
     },
     maroon: {
       100: '#800000',
@@ -153,50 +161,34 @@ export const assignTechTagColor = type => {
   switch (type) {
     case 'angularjs':
       return 'red'
-      break
     case 'gulpjs':
       return 'maroon'
-      break
     case 'prestashop':
       return 'black'
-      break
     case 'yii2':
       return 'skygreen'
-      break
     case 'vuejs':
       return 'seagreen'
-      break
     case 'laravel':
       return 'orangered'
-      break
     case 'javascript vanilla':
       return 'gold'
-      break
     case 'sass':
       return 'hotpink'
-      break
     case 'html5':
       return 'darkorange'
-      break
     case 'react':
       return 'reactblue'
-      break
     case 'typescript':
       return 'dirtyskyblue'
-      break
     case 'chakraui':
       return 'chakraUI'
-      break
     case 'nextjs':
       return 'black'
-      break
     case 'gruntjs':
       return 'lightsalmon'
-      break
     case 'bootstrap':
       return 'greenviolet'
-      break
     default:
-      break
   }
 }
