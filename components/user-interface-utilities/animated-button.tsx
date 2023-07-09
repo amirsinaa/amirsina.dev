@@ -7,13 +7,14 @@ import Link from 'next/link'
 
 
 const AnimatedButton = (props: AnimatedButtonProps) => {
-  const { link, icon, background, width, hoverBackground, text } = props
+  const { link, icon, buttonColorSchema, bg, width, hoverBackground, text, color } = props
   return (
     <MotionBox
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       opacity='0'
       justify='center'
+      minW={width ?? 'fit-content'}
       initial={{
         opacity: 0,
         translateY: 150
@@ -29,10 +30,12 @@ const AnimatedButton = (props: AnimatedButtonProps) => {
       <Link href={link}>
         <Button
           leftIcon={icon}
-          colorScheme={background ?? 'gray'}
+          colorScheme={buttonColorSchema}
+          bg={bg}
           variant='solid'
-          minW={width ?? 'fit-content'}
+          w='100%'
           fontWeight='bold'
+          color={color}
           _hover={{
             bg: hoverBackground
           }}
