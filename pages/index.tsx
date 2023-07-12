@@ -1,6 +1,5 @@
 import {
   Highlight,
-  Center,
   Avatar,
   Stack,
   Flex,
@@ -22,23 +21,45 @@ export default function Index() {
     <PageLayout title='Amirsina Shadkami - Frontend Developer'>
       <PageSlideFade>
         <StaggerChildren>
-          <Flex direction={['column', 'column', 'row']} pt={10} mt={9}>
-            <MotionBox p={'1.9rem'} pt={0} pb={0} m='auto' mb={[16, 16, 'auto']}>
+          <Flex
+            mx={10}
+            pos='relative'
+            direction={['column', 'column', 'row']}
+            pt='10%'
+            mt='10%'
+          >
+            <MotionBox
+              initial={{
+                opacity: 0,
+                translateY: 150
+              }}
+              animate={{
+                opacity: 1,
+                translateY: 0,
+                transition: {
+                  duration: 0.8
+                }
+              }}
+            >
               <Avatar
                 size={'3xl'}
                 src={''}
+                pos={['initial', 'absolute']}
+                top='-30%'
+                left='35%'
+                zIndex={99}
+                display={['block']}
               />
             </MotionBox>
             <MotionBox
               m={['auto', 'initial']}
-              w={['90%', '85%', '80%']}
               p={['2rem']}
-              maxW='800px'
               opacity='0'
               justify='center'
-              bg='white'
+              bg='deepBlueSea.100'
+              color='white'
               borderRadius='xl'
-              boxShadow='lg'
+              boxShadow='sm'
               direction='column'
               initial={{
                 opacity: 0,
@@ -52,57 +73,118 @@ export default function Index() {
                 }
               }}
             >
-
-              <Box as='p' fontSize='2xl' fontWeight='400' textAlign='left' mt={1} mb={2.5}>
+              <Box
+                as='p'
+                fontSize='2xl'
+                fontWeight='400'
+                textAlign='left'
+                mt={1}
+                mb={2.5}>
                 Hi !
               </Box>
-              <Box as='p' mb={2} fontSize='2xl' fontWeight='400' textAlign='left'>
+              <Box
+                as='p'
+                mb={2}
+                fontSize='2xl'
+                fontWeight='400'
+                textAlign='left'
+              >
                 <Highlight
                   query={['Amirsina Shadkami']}
-                  styles={{ px: '2', py: '1', rounded: 'full', bg: 'green.600', color: 'white', fontWeight: 'bold' }}
-                >My name is Amirsina Shadkami.</Highlight>
-
+                  styles={{
+                    px: '2',
+                    py: '1',
+                    rounded: 'full',
+                    bg: 'yellowish.100',
+                    color: 'white',
+                    fontWeight: 'bold'
+                  }}
+                >
+                  My name is Amirsina Shadkami.
+                </Highlight>
               </Box>
-              <Box as='p' mt={2} textAlign={['justify']} fontSize='md' pt='2rem'>
+              <Box
+                as='p'
+                mt={2}
+                textAlign={['justify']}
+                fontSize='md'
+                pt='2rem'
+              >
                 <Highlight
                   query={['developer', 'Reactjs', 'JavaScript']}
-                  styles={{ px: '1.5', py: '0.5', rounded: 'full', bg: 'teal.100' }}
+                  styles={{
+                    px: '1.5',
+                    py: '0.5',
+                    rounded: 'full',
+                    bg: 'yellowish.100'
+                  }}
                 >
                   I&aposm an accomplished Front-end developer with extensive experience in (JavaScript, Reactjs), modern web paradigms  (e.g., PWA, JAMstack) , widely used frameworks and some other various modern web technologies and tools.
                 </Highlight>
               </Box>
-              <Center mt='2rem'>
-                <Stack direction={['column', 'row']}>
-                  <AnimatedButton
-                    link='/about'
-                    icon={<VscPerson />}
-                    background='green'
-                    hoverBackground='darkgreen'
-                    text='About me'
-                  />
-                  <AnimatedButton
-                    link='/about'
-                    icon={<VscBook />}
-                    background='purple'
-                    hoverBackground='green'
-                    text='Blog'
-                  />
-                  <AnimatedButton
-                    link='/skills'
-                    icon={<BsWrench />}
-                    background='yellow'
-                    hoverBackground='skyblue'
-                    text='My Skills'
-                  />
-                  <AnimatedButton
-                    link='/projects'
-                    icon={<BsCodeSlash />}
-                    background='pink'
-                    hoverBackground='orangered'
-                    text='Projects'
-                  />
-                </Stack>
-              </Center>
+            </MotionBox>
+          </Flex>
+          <Flex
+            mx={12}
+            pos='relative'
+            direction={['row']}
+            pt={10}
+            px={0}
+          >
+            <MotionBox
+              opacity='0'
+              justify='center'
+              w='100%'
+              initial={{
+                opacity: 0,
+                translateX: 150
+              }}
+              animate={{
+                opacity: 1,
+                translateX: 0,
+                transition: {
+                  duration: 0.5
+                }
+              }}
+            >
+              <Stack
+                direction={['column', 'column', 'column', 'row']}
+                w='100%'
+                justify='space-evenly'
+              >
+                <AnimatedButton
+                  link='/about'
+                  width='25%'
+                  icon={<VscPerson />}
+                  buttonColorSchema='green'
+                  hoverBackground='darkgreen'
+                  text='About me'
+                />
+                <AnimatedButton
+                  link='/about'
+                  width='25%'
+                  icon={<VscBook />}
+                  buttonColorSchema='purple'
+                  hoverBackground='green'
+                  text='Blog'
+                />
+                <AnimatedButton
+                  link='/skills'
+                  width='25%'
+                  icon={<BsWrench />}
+                  buttonColorSchema='yellow'
+                  hoverBackground='skyblue'
+                  text='My Skills'
+                />
+                <AnimatedButton
+                  link='/projects'
+                  width='25%'
+                  icon={<BsCodeSlash />}
+                  buttonColorSchema='pink'
+                  hoverBackground='orangered'
+                  text='Projects'
+                />
+              </Stack>
             </MotionBox>
           </Flex>
         </StaggerChildren>
