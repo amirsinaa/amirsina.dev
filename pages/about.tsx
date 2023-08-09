@@ -224,6 +224,7 @@ const About = ({
                       base: 'column',
                       sm: 'row',
                     }}
+                    justifyContent={'center'}
                     mt={{
                       base: 8,
                       lg: 0,
