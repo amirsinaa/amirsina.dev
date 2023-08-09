@@ -12,6 +12,11 @@ export const theme = extendTheme({
         bg: mode('bodyBackground.100', 'bodyBackground.900')(props),
         fontSize: '1.2em',
       },
+      main: {
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column'
+      },
       a: {
         color: mode('yellowish.100', 'yellowish.100')(props),
         transition: 'color 0.25s',
@@ -21,6 +26,9 @@ export const theme = extendTheme({
       span: {
         transition: 'color 0.25s, background 0.25s',
         transitionTimingFunction: 'ease-out',
+      },
+      footer: {
+        marginTop: '-3.5em',
       }
     }),
   },
@@ -77,7 +85,8 @@ export const theme = extendTheme({
       900: '#000000'
     },
     deepBlueSea: {
-      100: '#14213d'
+      100: '#14213d',
+      200: '#243a6b'
     },
     yellowish: {
       100: '#fca311',
