@@ -11,16 +11,18 @@ function AppLayout(props) {
     <Fragment>
       {router.pathname === '/' ? null : <NavbarMenu />}
       <Box
+        as='main'
         textAlign='center'
         fontSize='lg'
         w={['100%', '95%', '90%', '85%', '80%', '75%', '70%']}
         maxW={1200}
         mx='auto'
       >
-        <Box pt={router.pathname === '/' ? '2rem' : '7rem'} pb={10}>
+        <Box pt={router.pathname === '/' ? '2rem' : '3rem'} pb={10}>
           {props.children}
         </Box>
       </Box>
+      <Footer />
       <Box
         bg={useColorModeValue('white', 'gray.500')}
         px='0.6em'
@@ -34,7 +36,6 @@ function AppLayout(props) {
       >
         <ColorModeSwitcher />
       </Box>
-      <Footer />
     </Fragment >
   )
 }
