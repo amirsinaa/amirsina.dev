@@ -156,16 +156,16 @@ export default function Index() {
                   link='/about'
                   width='25%'
                   icon={<VscPerson />}
-                  buttonColorSchema='green'
-                  hoverBackground='darkgreen'
+                  buttonColorSchema='purple'
+                  hoverBackground='purple'
                   text='About me'
                 />
                 <AnimatedButton
-                  link='/about'
+                  link='/blog'
                   width='25%'
                   icon={<VscBook />}
-                  buttonColorSchema='purple'
-                  hoverBackground='green'
+                  buttonColorSchema='orange'
+                  hoverBackground='darkOrange'
                   text='Blog'
                 />
                 <AnimatedButton
@@ -173,7 +173,7 @@ export default function Index() {
                   width='25%'
                   icon={<BsWrench />}
                   buttonColorSchema='yellow'
-                  hoverBackground='skyblue'
+                  hoverBackground='gold'
                   text='My Skills'
                 />
                 <AnimatedButton
@@ -181,7 +181,7 @@ export default function Index() {
                   width='25%'
                   icon={<BsCodeSlash />}
                   buttonColorSchema='pink'
-                  hoverBackground='orangered'
+                  hoverBackground='hotpink'
                   text='Projects'
                 />
               </Stack>
