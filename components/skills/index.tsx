@@ -1,4 +1,5 @@
 import {
+  useColorModeValue,
   VStack,
   Center,
   Box,
@@ -37,9 +38,11 @@ const Skills = ({ skills }: SkillsProps) => {
             >
               <SimpleGrid columns={[2, 2, 3, 3, 4]} spacing={4} mt={8}>
                 {skills.map((tool) => (
-                  <Link href={tool.link}  key={tool.id}>
+                  <Link href={tool.link} key={tool.id}>
                     <Card
                       title={tool.name}
+                      bg={useColorModeValue('gray.50', 'deepBlueSea.100')}
+                      color={useColorModeValue('gray.700', 'white')}
                       logo={tool.image}
                       colorMode={colorMode}
                     />
