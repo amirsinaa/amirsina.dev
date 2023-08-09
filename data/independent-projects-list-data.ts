@@ -8,15 +8,134 @@ export const IndependentProjectsListData = [
     technologies: [
       {
         id: 9011,
+        colorMode: 'red',
         name: 'Angularjs'
       },
       {
         id: 9012,
+        colorMode: 'hotpink',
         name: 'Sass'
       },
       {
         id: 9013,
+        colorMode: 'greenviolet',
         name: 'Bootstrap'
+      },
+    ]
+  },
+  {
+    id: 907,
+    title: 'Bookabulary',
+    logo: '/assets/images/projects/bk.png',
+    link: 'https://github.com/amirsinaa/bookabulary/',
+    description: `Create vocabulary from books you have read to share with others or read others' collections to learn The original idea for this application was for books but there is no limitation to that, you can treat books as an abstract entity`,
+    technologies: [
+      {
+        id: 90713,
+        colorMode: 'seagreen',
+        name: 'Supabase'
+      },
+      {
+        id: 90723,
+        colorMode: 'black',
+        name: 'Nextjs'
+      },
+      {
+        id: 90733,
+        colorMode: 'dirtyskyblue',
+        name: 'Typescript'
+      },
+      {
+        id: 90739,
+        colorMode: 'hotpink',
+        name: 'React Query'
+      },
+      {
+        id: 90743,
+        colorMode: 'chakraUI',
+        name: 'TailwindCss'
+      },
+    ]
+  },
+  {
+    id: 909,
+    title: 'VSCotion',
+    logo: '/assets/images/projects/vscotion.png',
+    link: 'https://marketplace.visualstudio.com/items?itemName=amirsina.vscotion',
+    description: `Vscotion is a Visual studio code extension to make a code snippet from the currently open file in vscode to your Notion account.`,
+    technologies: [
+      {
+        id: 90712,
+        colorMode: 'seagreen',
+        name: 'Nodejs'
+      },
+      {
+        id: 90732,
+        colorMode: 'dirtyskyblue',
+        name: 'Typescript'
+      }
+    ]
+  },
+  {
+    id: 911,
+    title: 'Nextjs Jetpack',
+    logo: '/assets/images/projects/jetpack.png',
+    link: 'https://github.com/amirsinaa/nextjs-jetpack',
+    description: `Nextjs jetpack is an advanced full-featured, ready-for-production starter to boilerplate your new Nextjs project with it.`,
+    technologies: [
+      {
+        id: 90721,
+        colorMode: 'black',
+        name: 'Nextjs'
+      },
+      {
+        id: 90731,
+        colorMode: 'dirtyskyblue',
+        name: 'Typescript'
+      },
+      {
+        id: 90741,
+        colorMode: 'chakraUI',
+        name: 'ChakraUI'
+      },
+      {
+        id: 90733,
+        colorMode: 'hotpink',
+        name: 'React Query'
+      },
+      {
+        id: 90743,
+        colorMode: 'chakraUI',
+        name: 'TailwindCss'
+      },
+    ]
+  },
+  {
+    id: 908,
+    title: 'Amirsina.dev portfolio',
+    logo: '/assets/images/projects/portfolio.png',
+    link: 'https://github.com/amirsinaa/amirsina.dev',
+    description: `Personal portfolio built using React and Nextjs.`,
+    technologies: [
+      {
+        id: 9071,
+        colorMode: 'reactblue',
+        name: 'React'
+      },
+      {
+        id: 9072,
+        colorMode: 'black',
+        name: 'Nextjs'
+      },
+      {
+        id: 9073,
+        colorMode: 'dirtyskyblue',
+        name: 'Typescript'
+      },
+      {
+        id: 9074,
+        colorMode: 'chakraUI',
+        name: 'ChakraUI'
       },
     ]
   },
@@ -29,18 +148,22 @@ export const IndependentProjectsListData = [
     technologies: [
       {
         id: 9021,
+        colorMode: 'maroon',
         name: 'Gulpjs'
       },
       {
         id: 9022,
+        colorMode: 'hotpink',
         name: 'Sass'
       },
       {
         id: 9023,
+        colorMode: 'darkorange',
         name: 'HTML5'
       },
       {
         id: 9024,
+        colorMode: 'greenviolet',
         name: 'Bootstrap'
       }
     ]
@@ -54,18 +177,22 @@ export const IndependentProjectsListData = [
     technologies: [
       {
         id: 9031,
+        colorMode: 'orangered',
         name: 'Laravel'
       },
       {
         id: 9032,
+        colorMode: 'seagreen',
         name: 'Vuejs'
       },
       {
         id: 9033,
+        colorMode: 'hotpink',
         name: 'Sass'
       },
       {
         id: 9034,
+        colorMode: 'greenviolet',
         name: 'Bootstrap'
       }
     ]
@@ -79,14 +206,17 @@ export const IndependentProjectsListData = [
     technologies: [
       {
         id: 9041,
+        colorMode: 'black',
         name: 'Prestashop'
       },
       {
         id: 9042,
+        colorMode: 'gold',
         name: 'Vanilla Javascript'
       },
       {
         id: 9043,
+        colorMode: 'greenviolet',
         name: 'Bootstrap'
       }
     ]
@@ -100,14 +230,17 @@ export const IndependentProjectsListData = [
     technologies: [
       {
         id: 9051,
+        colorMode: 'skygreen',
         name: 'Yii2'
       },
       {
         id: 9052,
+        colorMode: 'gold',
         name: ' Vanilla Javascript'
       },
       {
         id: 9053,
+        colorMode: 'greenviolet',
         name: 'Bootstrap'
       }
     ]
@@ -121,45 +254,24 @@ export const IndependentProjectsListData = [
     technologies: [
       {
         id: 9061,
+        colorMode: 'lightsalmon',
         name: 'Gruntjs'
       },
       {
         id: 9062,
+        colorMode: 'greenviolet',
         name: 'Bootstrap',
       },
       {
         id: 9063,
+        colorMode: 'darkorange',
         name: 'HTML5'
       },
       {
         id: 9064,
+        colorMode: 'hotpink',
         name: 'Sass'
       }
     ]
-  },
-  {
-    id: 907,
-    title: 'Amirsina.dev portfolio',
-    logo: '/assets/images/projects/portfolio.png',
-    link: 'https://github.com/amirsinaa/amirsina.dev',
-    description: `Personal portfolio built using React and Nextjs.`,
-    technologies: [
-      {
-        id: 9071,
-        name: 'React'
-      },
-      {
-        id: 9072,
-        name: 'Nextjs'
-      },
-      {
-        id: 9073,
-        name: 'Typescript'
-      },
-      {
-        id: 9074,
-        name: 'ChakraUI'
-      },
-    ]
-  },
+  }
 ]

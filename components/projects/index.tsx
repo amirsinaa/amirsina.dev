@@ -3,7 +3,6 @@ import {
   HStack,
   Tag
 } from '@chakra-ui/react'
-import { assignTechTagColor } from '@/components/user-interface-utilities/theme'
 import Card from '@/components/user-interface-utilities/card'
 import { VStack, SimpleGrid } from '@chakra-ui/react'
 import { LayoutGroup } from 'framer-motion'
@@ -22,16 +21,18 @@ const Projects = ({ projects }: ProjectsProps) => {
                 title={project.title}
                 description={project.description}
                 logo={project.logo}
-                colorMode={colorMode}
+                logoSize={['36', '36']}
+                bg='deepBlueSea.100'
               >
                 <HStack pt={2} display={{ sm: 'none', md: 'flex' }}>
                   {project.technologies.map((tech) => (
                     <Tag
                       key={tech.id}
+                      color='white'
                       size='sm'
                       fontWeight='bold'
                       m={['0px', '0px', '5px']}
-                      colorScheme={assignTechTagColor(tech)}
+                      colorScheme={tech.colorMode}
                     >
                       {tech.name}
                     </Tag>

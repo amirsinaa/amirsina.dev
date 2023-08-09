@@ -1,6 +1,7 @@
 export interface Technologies {
   id: number
   name: string
+  colorMode: string
 }
 
 export interface ProjectInterface {
