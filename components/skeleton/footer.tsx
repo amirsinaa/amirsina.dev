@@ -19,12 +19,18 @@ const Footer = () => {
   return (
     <Stack
       as='footer'
+      bg={useColorModeValue('deepBlueSea.100', 'gray.700')}
+      px={4}
+      boxShadow={'lg'}
+      borderTopRightRadius='2xl'
+      borderTopLeftRadius='2xl'
       isInline
+      color={'white'}
       spacing={[1, 2]}
       p={4}
       justifyContent='space-between'
       alignItems='center'
-      w={['100%', '85%', '80%']}
+      w={['90%', '95%', '90%']}
       maxW={1200}
       mx='auto'
     >
@@ -38,7 +44,7 @@ const Footer = () => {
         <Text
           textAlign='center'
           fontSize='sm'
-          color={useColorModeValue('gray.500', 'gray.200')}
+          color={'white'}
         >
           © {new Date().getFullYear()} Amirsina Shadkami{' '}
         </Text>
