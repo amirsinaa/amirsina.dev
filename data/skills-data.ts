@@ -25,9 +25,9 @@ export const SkillsCollection = [
   },
   {
     id: 105,
-    name: 'Markdown',
-    link: 'https://en.wikipedia.org/wiki/Markdown',
-    image: '/assets/images/skills/markdown.png'
+    name: 'Remix js',
+    link: '',
+    image: '/assets/images/skills/remix.png'
   },
   {
     id: 106,
@@ -43,15 +43,15 @@ export const SkillsCollection = [
   },
   {
     id: 108,
-    name: 'Less',
-    link: 'https://lesscss.org/',
-    image: '/assets/images/skills/less.png'
+    name: 'Styled components',
+    link: '',
+    image: '/assets/images/skills/styl.png'
   },
   {
     id: 109,
-    name: 'Pugjs',
-    link: 'https://pugjs.org/',
-    image: '/assets/images/skills/pug.png'
+    name: 'Framer motion',
+    link: '',
+    image: '/assets/images/skills/framer.webp'
   },
   {
     id: 1010,
@@ -67,21 +67,21 @@ export const SkillsCollection = [
   },
   {
     id: 1012,
-    name: 'Mysql',
-    link: 'https://www.mysql.com/',
-    image: '/assets/images/skills/mysql.png'
+    name: 'Chakra UI',
+    link: '',
+    image: '/assets/images/skills/chak.webp'
   },
   {
     id: 1013,
-    name: 'Vuejs',
-    link: 'vuejs.org',
-    image: '/assets/images/skills/vue.png'
+    name: 'Redux',
+    link: '',
+    image: '/assets/images/skills/redux.png'
   },
   {
     id: 1014,
-    name: 'Nuxt',
-    link: 'https://nuxtjs.org/',
-    image: '/assets/images/skills/nuxt.png'
+    name: 'Jest',
+    link: '',
+    image: '/assets/images/skills/jest.webp'
   },
   {
     id: 1015,
@@ -91,9 +91,9 @@ export const SkillsCollection = [
   },
   {
     id: 1016,
-    name: 'Laravel',
-    link: 'https://laravel.com/',
-    image: '/assets/images/skills/laravel.png'
+    name: 'Cypress',
+    link: '',
+    image: '/assets/images/skills/cypress.png'
   },
   {
     id: 1017,
