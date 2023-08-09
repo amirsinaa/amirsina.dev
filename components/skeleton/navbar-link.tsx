@@ -16,11 +16,15 @@ export default function NavbarLink(props: NavbarLinkProps) {
         bg='transparent'
         as='span'
         p={2}
+        mx={5}
+        color={'white'}
         borderRadius='2xl'
         fontWeight='bold'
+        fontSize='2xl'
         _hover={{
+          fontWeight: 'normal',
           color: 'white',
-          background: useColorModeValue('gray.600', 'gray.600')
+          background: useColorModeValue('orange', 'orange')
         }}
       >
         {props.name}
