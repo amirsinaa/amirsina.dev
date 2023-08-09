@@ -1,4 +1,5 @@
 import {
+  useColorModeValue,
   useColorMode,
   ListItem,
   ListIcon,
@@ -66,9 +67,10 @@ const About = ({
                   <Card
                     title={company.title}
                     role={company.role}
+                    bg={useColorModeValue('deepBlueSea.100', 'gray.700')}
+                    color='white'
                     period={company.period}
                     logo={company.logo}
-                    colorMode={colorMode}
                   />
                   <Box mr={7} ml={7}>
                     <Box
@@ -84,9 +86,10 @@ const About = ({
                       <Card
                         key={project.id}
                         title={project.title}
+                        bg={useColorModeValue('deepBlueSea.100', 'gray.700')}
+                        color='white'
                         description={project.description}
                         logo={project.logo}
-                        colorMode={colorMode}
                       />
                     ))}
                     <Box
@@ -147,10 +150,11 @@ const About = ({
               {education.map((institute) => (
                 <Card
                   key={institute.id}
+                  bg={useColorModeValue('deepBlueSea.100', 'gray.700')}
+                  color='white'
                   title={institute.title}
                   role={institute.role}
                   logo={institute.logo}
-                  colorMode={colorMode}
                 />
               ))}
             </VStack>
@@ -171,7 +175,7 @@ const About = ({
               justifyContent='center'
             >
               <Box
-                bg='gray.50'
+                bg='yellowish.100'
                 boxShadow='md'
                 borderRadius='xl'
                 w='100%'
@@ -231,15 +235,15 @@ const About = ({
                     <AnimatedButton
                       link='/blog'
                       icon={<VscBook />}
-                      background='pink'
-                      hoverBackground='gray'
+                      bg='deepBlueSea.100'
+                      color='white'
                       text='English'
                     />
                     <AnimatedButton
                       link='/blog'
                       icon={<VscBook />}
-                      background='purple'
-                      hoverBackground='gray'
+                      bg='white'
+                      color='deepBlueSea.100'
                       text='Persian'
                     />
                   </Stack>
