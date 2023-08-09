@@ -15,6 +15,9 @@ const AnimatedButton = (props: AnimatedButtonProps) => {
       opacity='0'
       justify='center'
       minW={width ?? 'fit-content'}
+      _hover={{
+        zIndex: 999
+      }}
       initial={{
         opacity: 0,
         translateY: 150
@@ -37,7 +40,9 @@ const AnimatedButton = (props: AnimatedButtonProps) => {
           fontWeight='bold'
           color={color}
           _hover={{
-            bg: hoverBackground
+            bg: hoverBackground,
+            padding: '0 1em',
+            transform: 'scale(1.1)'
           }}
         >
           {text}
