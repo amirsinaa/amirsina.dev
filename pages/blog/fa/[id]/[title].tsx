@@ -29,15 +29,21 @@ function Blog({ data }) {
         description={data.title}
         keywords={data.keywords}
       />
-      <Breadcrumb>
+      <Breadcrumb
+        style={{
+          background: 'rgb(237, 237, 237)',
+          padding: '1em',
+          borderRadius: '10px',
+          boxShadow: '1px 1px 4px -2px #000'
+        }}>
         <BreadcrumbItem>
           <Link href='#'>
             Home
           </Link>
         </BreadcrumbItem>
         <BreadcrumbItem>
-          <Link href='/blog'>
-            Blog
+          <Link href='/blog/fa'>
+            Fa
           </Link>
         </BreadcrumbItem>
         <BreadcrumbItem isCurrentPage>
@@ -46,6 +52,7 @@ function Blog({ data }) {
       </Breadcrumb>
       <Box
         as='article'
+        my={10}
         className='blog-post'
         flexDirection='column'
         dir={data.language === 'fa' ? 'rtl' : 'ltr'}
