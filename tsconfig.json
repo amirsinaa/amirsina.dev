@@ -30,7 +30,8 @@
 			"@/types/*": ["types/*"],
 			"@/services/*": ["./services/*"],
 			"@/data/*": ["./data/*"],
-			"@/public/*": ["./public/*"]
+			"@/public/*": ["./public/*"],
+			"@/constants/*": ["./constants/*"]
 		},
 		"incremental": true,
 		"plugins": [
