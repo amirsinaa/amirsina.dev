@@ -17,6 +17,16 @@ export const theme = extendTheme({
         display: 'flex',
         flexDirection: 'column'
       },
+      '.progress-bar': {
+        position: 'fixed',
+        top: '0',
+        left: '0',
+        zIndex: '999',
+        right: '0',
+        height: '10px',
+        background: mode('deepBlueSea.300', 'deepBlueSea.200'),
+        transformOrigin: '0%'
+      },
       'article p': {
         textAlign: 'justify'
       },
@@ -44,6 +54,7 @@ export const theme = extendTheme({
       pre: {
         background: 'rgb(242, 242, 242)',
         padding: '20px',
+        color: 'black.100',
         overflowX: 'scroll',
         margin: '55px 10px',
         textAlign: 'left',
@@ -118,7 +129,8 @@ export const theme = extendTheme({
     },
     deepBlueSea: {
       100: '#14213d',
-      200: '#243a6b'
+      200: '#243a6b',
+      300: '#4b73cd'
     },
     yellowish: {
       100: '#fca311',

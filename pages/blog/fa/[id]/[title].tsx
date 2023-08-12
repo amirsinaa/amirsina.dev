@@ -1,3 +1,4 @@
+import { MotionBox } from '@/components/user-interface-utilities/chakra-factory'
 import {
   filterArticleSource
 } from '@/components/blog/helpers/filter-article-source'
@@ -10,16 +11,17 @@ import {
 } from '@/data/persian-published-articles-data'
 import { Breadcrumb } from '@/components/blog/breadcrumb'
 import { serialize } from 'next-mdx-remote/serialize'
+import { BLOG_BASE_URL } from '@/constants/blog'
 import Meta from '@/components/skeleton/meta'
 import smartypants from 'remark-smartypants'
 import { MDXRemote } from 'next-mdx-remote'
 import rehypePrism from 'rehype-prism-plus'
-import { Box } from '@chakra-ui/react'
+import { useScroll } from 'framer-motion'
 import { useRouter } from 'next/router'
-import { BLOG_BASE_URL } from '@/constants/blog'
 
 function Blog({ data }) {
   const { asPath, route } = useRouter();
+  const { scrollYProgress } = useScroll();
 
   return (
     <>
@@ -31,18 +33,21 @@ function Blog({ data }) {
         url={`${BLOG_BASE_URL}${asPath}`}
         type='article'
       />
-
+      <MotionBox
+        className='progress-bar'
+        style={{ scaleX: scrollYProgress }}
+      />
       <Breadcrumb route={route} query={String(data.title)} />
-      <Box
+      <MotionBox
+        className='blog-post'
         as='article'
         my={10}
-        className='blog-post'
         flexDirection='column'
         dir={data.language === 'fa' ? 'rtl' : 'ltr'}
         textAlign={data.language === 'fa' ? 'right' : 'left'}
       >
         <MDXRemote {...data.markdown} />
-      </Box>
+      </MotionBox>
     </>
   )
 }
