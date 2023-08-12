@@ -15,36 +15,19 @@ import Meta from '@/components/skeleton/meta'
 import { formatBlogPostUrl } from '@/components/blog/helpers/format-blog-post-url'
 import Link from 'next/link'
 import { FaRegHandPointRight } from 'react-icons/fa'
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink
-} from '@chakra-ui/react'
+import { Breadcrumb } from '@/components/blog/breadcrumb'
+import { useRouter } from 'next/router'
 
 function EnglishBlogPosts({ enArticles }) {
+  const { route } = useRouter();
   return (
     <>
       <Meta
-        title='Blog posts'
+        title='English blog posts'
         description='informative and detailed frontend development articles and guides'
         keywords='development blog, programming blog, web, frontend, software, engineer,software engineer,front-end blog'
       />
-      <Breadcrumb style={{
-        background: 'rgb(237, 237, 237)',
-        padding: '1em',
-        borderRadius: '10px',
-        boxShadow: '1px 1px 4px -2px #000'
-      }}>
-        <BreadcrumbItem>
-          <Link href='/blog'>
-            Blog
-          </Link>
-        </BreadcrumbItem>
-        <BreadcrumbItem isCurrentPage>
-          <BreadcrumbLink>En</BreadcrumbLink>
-        </BreadcrumbItem>
-      </Breadcrumb>
-
+      <Breadcrumb route={route} />
       <Card borderRadius='xl' marginTop={3} boxShadow='md'>
         <CardBody>
           <Stack divider={<StackDivider />} spacing='4' textAlign='left' dir='ltr'>

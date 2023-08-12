@@ -15,13 +15,11 @@ import { formatBlogPostUrl } from '@/components/blog/helpers/format-blog-post-ur
 import { FaRegHandPointLeft } from 'react-icons/fa'
 import Meta from '@/components/skeleton/meta'
 import Link from 'next/link'
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink
-} from '@chakra-ui/react'
+import { Breadcrumb } from '@/components/blog/breadcrumb'
+import { useRouter } from 'next/router'
 
 function PersianBlogPosts({ faArticles }) {
+  const { route } = useRouter();
   return (
     <>
       <Meta
@@ -29,21 +27,7 @@ function PersianBlogPosts({ faArticles }) {
         description='پست های آموزشی توسعه نرم افزار های تحت وب'
         keywords='development blog, programming blog, web, frontend, software, engineer,software engineer,front-end Blog,وب,فرانت اند,نرم افزار,'
       />
-      <Breadcrumb style={{
-        background: 'rgb(237, 237, 237)',
-        padding: '1em',
-        borderRadius: '10px',
-        boxShadow: '1px 1px 4px -2px #000'
-      }}>
-        <BreadcrumbItem>
-          <Link href='/blog'>
-            Blog
-          </Link>
-        </BreadcrumbItem>
-        <BreadcrumbItem isCurrentPage>
-          <BreadcrumbLink>Fa</BreadcrumbLink>
-        </BreadcrumbItem>
-      </Breadcrumb>
+      <Breadcrumb route={route} />
 
       <Card borderRadius='xl' marginTop={3} boxShadow='md'>
         <CardBody>

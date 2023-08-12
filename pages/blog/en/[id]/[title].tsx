@@ -8,47 +8,29 @@ import {
 import {
   EnglishPublishedArticlesData
 } from '@/data/english-published-articles-data'
+import { Breadcrumb } from '@/components/blog/breadcrumb'
 import { serialize } from 'next-mdx-remote/serialize'
+import { BLOG_BASE_URL } from '@/constants/blog'
 import Meta from '@/components/skeleton/meta'
 import smartypants from 'remark-smartypants'
 import { MDXRemote } from 'next-mdx-remote'
 import rehypePrism from 'rehype-prism-plus'
+import { useRouter } from 'next/router'
 import { Box } from '@chakra-ui/react'
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink
-} from '@chakra-ui/react'
-import Link from 'next/link'
 
 function Blog({ data }) {
+  const { asPath, route } = useRouter();
   return (
     <>
       <Meta
         title={data.title}
         description={data.title}
         keywords={data.keywords}
+        locale='en'
+        url={`${BLOG_BASE_URL}${asPath}`}
+        type='article'
       />
-      <Breadcrumb style={{
-        background: 'rgb(237, 237, 237)',
-        padding: '1em',
-        borderRadius: '10px',
-        boxShadow: '1px 1px 4px -2px #000'
-      }}>
-        <BreadcrumbItem>
-          <Link href='/blog'>
-            Blog
-          </Link>
-        </BreadcrumbItem>
-        <BreadcrumbItem>
-          <Link href='/blog/en'>
-            En
-          </Link>
-        </BreadcrumbItem>
-        <BreadcrumbItem isCurrentPage>
-          <BreadcrumbLink>{data.title}</BreadcrumbLink>
-        </BreadcrumbItem>
-      </Breadcrumb>
+      <Breadcrumb route={route} query={String(data.title)} />
       <Box
         as='article'
         marginTop={5}
