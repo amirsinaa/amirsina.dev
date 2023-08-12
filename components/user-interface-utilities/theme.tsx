@@ -17,6 +17,38 @@ export const theme = extendTheme({
         display: 'flex',
         flexDirection: 'column'
       },
+      'article p': {
+        textAlign: 'justify'
+      },
+      'article h1': {
+        textAlign: 'center',
+        fontWeight: 'bold',
+        fontSize: '2.5em',
+        margin: '15px auto'
+      },
+      'article hr': {
+        margin: '25px 5px',
+      },
+      'article ul': {
+        padding: '10px 35px'
+      },
+      'article p,article ul li': {
+        fontSize: '1.2em',
+        margin: '5px 0'
+      },
+      'article img': {
+        maxWidth: '1200px',
+        margin: '10px auto',
+        objectFit: 'contain'
+      },
+      pre: {
+        background: 'rgb(242, 242, 242)',
+        padding: '20px',
+        overflowX: 'scroll',
+        margin: '55px 10px',
+        textAlign: 'left',
+        direction: 'ltr'
+      },
       a: {
         color: mode('yellowish.100', 'yellowish.100')(props),
         transition: 'color 0.25s',
