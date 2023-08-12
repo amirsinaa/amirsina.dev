@@ -10,32 +10,64 @@ import {
   ListIcon,
   Stack
 } from '@chakra-ui/react'
+import { useScroll } from "framer-motion";
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { FaCircle } from 'react-icons/fa'
 import { AiOutlineClose } from 'react-icons/ai'
+import { useState, useEffect } from 'react';
 import { MenuLinks } from '@/data/menu-links'
 import NavbarLink from './navbar-link'
 import { MotionBox } from '../user-interface-utilities/chakra-factory'
 
 export default function NavbarMenu() {
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const { scrollY } = useScroll();
+  const [isSticky, setIsSticky] = useState(false);
+
+  function makeHeaderSticky() {
+    if (scrollY?.get() < 150) {
+      setIsSticky(false);
+    } else if (scrollY?.get() > 150 && scrollY?.get() > scrollY?.getPrevious()) {
+      setIsSticky(true);
+    }
+  }
+
+  useEffect(() => {
+    return scrollY.onChange(() => makeHeaderSticky());
+  });
+
+
   return (
     <MotionBox
       bg={useColorModeValue('deepBlueSea.100', 'gray.700')}
-      px={4}
       boxShadow='2xl'
-      borderRadius='2xl'
-      p={4}
+      position='fixed'
       display='flex'
       flexDir={'column'}
-      justifyContent='space-between'
+      zIndex='99'
+      transform='translate(50%,0%)'
+      right='50%'
+      p={0.5}
+      justifyContent='center'
       alignItems='center'
       alignSelf='center'
-      w={['90%', '95%', '90%']}
-      maxW={1200}
-      mx='auto'
-      my='1.5em'
+      w={['90%', '90%', '90%', '60%']}
       as='header'
+      variants={
+        {
+          visible: {
+            margin: '1.5em auto',
+            borderRadius: '25px',
+          },
+          hidden: {
+            width: '100%',
+            margin: 0,
+            borderRadius: 0
+          }
+        }
+      }
+      animate={isSticky ? "hidden" : "visible"}
+      transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.4 }}
     >
       <Flex
         h={16}

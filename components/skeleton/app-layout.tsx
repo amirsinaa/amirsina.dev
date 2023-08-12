@@ -18,7 +18,7 @@ function AppLayout(props) {
         maxW={1200}
         mx='auto'
       >
-        <Box pt={router.pathname === '/' ? '2rem' : '3rem'} pb={10}>
+        <Box pt={router.pathname === '/' ? '2rem' : '3rem'} pb={10} my={router.pathname === '/' ? '1rem' : '8em'}>
           {props.children}
         </Box>
       </Box>

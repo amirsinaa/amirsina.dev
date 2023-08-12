@@ -1,7 +1,6 @@
 import {
   useColorModeValue,
-  Text,
-  background
+  Text
 } from '@chakra-ui/react'
 import Link from 'next/link'
 import { NavbarLinkProps } from '@/types/navbar'
@@ -20,7 +19,7 @@ export default function NavbarLink(props: NavbarLinkProps) {
         color={'white'}
         borderRadius='2xl'
         fontWeight='bold'
-        fontSize='2xl'
+        fontSize='xl'
         _hover={{
           fontWeight: 'normal',
           color: 'white',

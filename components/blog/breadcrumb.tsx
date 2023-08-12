@@ -2,7 +2,8 @@ import Link from 'next/link';
 import {
   Breadcrumb as ChakraBreadcrumb,
   BreadcrumbItem,
-  BreadcrumbLink
+  BreadcrumbLink,
+  useColorModeValue
 } from '@chakra-ui/react';
 
 
@@ -18,7 +19,8 @@ export const Breadcrumb = ({
   const isArticle = typeof query === 'undefined' ? false : true;
   return (
     <ChakraBreadcrumb style={{
-      background: 'rgb(237, 237, 237)',
+      background: useColorModeValue('rgb(237, 237, 237)', 'deepBlueSea.200'),
+      color: 'black',
       padding: '1em',
       borderRadius: '10px',
       boxShadow: '1px 1px 4px -2px #000'
