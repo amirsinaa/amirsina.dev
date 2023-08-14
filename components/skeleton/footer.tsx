@@ -6,43 +6,49 @@ import {
   Text,
   useColorModeValue,
   Flex
-} from "@chakra-ui/react";
-import SiteConfig from "@/configs/index";
+} from '@chakra-ui/react'
+import SiteConfig from '@/configs/index'
 
 const iconProps = {
-  variant: "ghost",
-  size: "lg",
+  variant: 'ghost',
+  size: 'lg',
   isRound: true
-};
+}
 
-const Footer = () => {
+const Footer = (): JSX.Element => {
   return (
     <Stack
-      as="footer"
+      as='footer'
+      bg={useColorModeValue('deepBlueSea.100', 'gray.700')}
+      px={4}
+      boxShadow={'lg'}
+      borderTopRightRadius='2xl'
+      borderTopLeftRadius='2xl'
       isInline
+      color={'white'}
       spacing={[1, 2]}
       p={4}
-      justifyContent="space-between"
-      alignItems="center"
-      w={["100%", "85%", "80%"]}
+      justifyContent='space-between'
+      alignItems='center'
+      w={['90%', '95%', '90%']}
       maxW={1200}
-      mx="auto"
+      mx='auto'
     >
       <Flex
-        flexDirection={["column", "column", "row"]}
-        flexFlow={["column-reverse", "column-reverse"]}
-        justifyContent={["center", "space-between"]}
-        alignItems="center"
-        w="100%"
+        flexDirection={['column', 'column', 'row']}
+        flexFlow={['column-reverse', 'column-reverse']}
+        justifyContent={['center', 'space-between']}
+        alignItems='center'
+        w='100%'
       >
         <Text
-          textAlign="center"
-          fontSize="sm"
-          color={useColorModeValue("gray.500", "gray.200")}
+          textAlign='center'
+          fontSize='sm'
+          color={'white'}
         >
-          © {new Date().getFullYear()} Amirsina Shadkami{" "}
+          © {new Date().getFullYear()} Amirsina Shadkami{' '}
         </Text>
-        <Box textAlign="center">
+        <Box textAlign='center'>
           {SiteConfig.author.accounts.map((sc, index) => (
             <IconButton
               key={index}
@@ -50,7 +56,7 @@ const Footer = () => {
               isExternal
               href={sc.url}
               aria-label={sc.label}
-              size="lg"
+              size='lg'
               colorScheme={sc.type}
               icon={sc.icon}
               {...iconProps}
@@ -59,7 +65,7 @@ const Footer = () => {
         </Box>
       </Flex>
     </Stack>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

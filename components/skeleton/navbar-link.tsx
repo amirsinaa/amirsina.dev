@@ -1,26 +1,33 @@
 import {
-  Link,
-  useColorModeValue
-} from "@chakra-ui/react";
-import NextLink from "next/link";
-import { NavbarLinkProps } from "@/types/navbar"
+  useColorModeValue,
+  Text
+} from '@chakra-ui/react'
+import Link from 'next/link'
+import type { NavbarLinkProps } from '@/types/navbar'
 
-export default function NavbarLink (props: NavbarLinkProps) {
+export default function NavbarLink(props: NavbarLinkProps): JSX.Element {
   return (
-    <NextLink href={props.path} passHref>
-      <Link
-        px={3}
-        py={1.5}
-        rounded={"md"}
+    <Link
+      href={props.path}
+      onClick={() => props.onClose()}
+    >
+      <Text
+        bg='transparent'
+        as='span'
+        p={2}
+        mx={5}
+        color={'white'}
+        borderRadius='2xl'
+        fontWeight='bold'
+        fontSize='xl'
         _hover={{
-          textDecoration: "none",
-          bg: useColorModeValue("gray.200", "gray.900"),
-          color: useColorModeValue("darkgreen.100", "darkgreen.100")
+          fontWeight: 'normal',
+          color: 'white',
+          background: useColorModeValue('orange', 'orange')
         }}
-        onClick={() => props.onClose()}
       >
         {props.name}
-      </Link>
-    </NextLink>
-  );
-};
+      </Text>
+    </Link >
+  )
+}

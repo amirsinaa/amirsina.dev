@@ -1,5 +1,6 @@
-import { SlideFade } from "@chakra-ui/react";
-import { MotionBox } from "./chakra-factory";
+import { SlideFade } from '@chakra-ui/react'
+import { MotionBox } from './chakra-factory'
+import { PropsWithChildren } from 'react'
 
 const staggerVariants = {
   initial: {
@@ -12,7 +13,7 @@ const staggerVariants = {
   exit: {
     transition: { staggerChildren: 0.05, staggerDirection: -1 }
   }
-};
+}
 
 const variants = {
   initial: {
@@ -33,7 +34,7 @@ const variants = {
       y: { stiffness: 1000 }
     }
   }
-};
+}
 
 export const easing = [0.6, -0.05, 0.01, 0.99]
 
@@ -72,7 +73,7 @@ export const container = {
       staggerChildren: 0.2
     }
   }
-};
+}
 
 export const item = {
   hidden: { y: 20, opacity: 0 },
@@ -80,21 +81,21 @@ export const item = {
     y: 0,
     opacity: 1
   }
-};
+}
 
 
 export const PageLayoutFramerMotionAnimateObjectVariants = {
-  hidden: { opacity: 0, x: -210, y: 0 },
+  hidden: { opacity: 0, x: 0, y: 0 },
   enter: { opacity: 1, x: 0, y: 0 },
   exit: { opacity: 0, x: 0, y: -115 }
-};
+}
 
 
-export const PageSlideFade = ({ children }) => {
-  return <SlideFade in>{children}</SlideFade>;
-};
+export const PageSlideFade = ({ children }: PropsWithChildren): JSX.Element => {
+  return <SlideFade in>{children}</SlideFade>
+}
 
-export const StaggerChildren = ({ children }) => {
+export const StaggerChildren = ({ children }: PropsWithChildren): JSX.Element => {
   return (
     <MotionBox
       animate={{
@@ -105,9 +106,9 @@ export const StaggerChildren = ({ children }) => {
     >
       {children}
     </MotionBox>
-  );
-};
+  )
+}
 
-export const CardTransition = ({ children }) => {
-  return <MotionBox variants={variants}>{children}</MotionBox>;
-};
+export const CardTransition = ({ children }: PropsWithChildren): JSX.Element => {
+  return <MotionBox variants={variants}>{children}</MotionBox>
+}

@@ -17,7 +17,11 @@ module.exports = {
 				node: true,
 				es6: true,
 			},
-			extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
+			extends: [
+				'eslint:recommended',
+				'plugin:@typescript-eslint/recommended',
+				'plugin:@next/next/recommended',
+			],
 			rules: {
 				'react/prop-types': 'off',
 				'@typescript-eslint/explicit-function-return-type': [
