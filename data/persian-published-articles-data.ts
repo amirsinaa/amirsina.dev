@@ -219,8 +219,11 @@ export const PersianPublishedArticlesData = [
   {
     id: '2',
     language: 'fa',
-    summary: '',
-    keywords: '',
+    summary: 'درواقع پیش پردازشگر های سی اس اس برنامه هایی هستند با سینتکس هایی مختص و منحصر به فرد به خود که به بر روی ماشین شما نصب شده و بسته به نوع شان یا دارای کامپایلر هایی هستند که سی اس اس تولید میکنند یا با کمک تکنولوژی هایی در زبان هایی مانند جاوا اسکریپت ترنسپایل میشوند به سی اس اس .',
+    markdown: `
+      # این مطلب به زودی در وبلاگ بازنویسی میشود تا آن زمان از ویرگول بخوانید
+    `,
+    keywords: 'css,postcss,frontend,sass vs postcss,scss,css preprocessor',
     title: 'تفاوت ۲ پیش پردازشگر سی اس اس (PostCSS , SASS)',
     readFrom: [
       {
