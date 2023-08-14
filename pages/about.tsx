@@ -15,6 +15,8 @@ import {
   StaggerChildren
 } from '@/components/user-interface-utilities/transitions'
 import { EnglishPublishedArticlesData } from '@/data/english-published-articles-data'
+import type { EducationFacilities } from '@/types/education'
+import type { Companies } from '@/types/company'
 import AnimatedButton from '@/components/user-interface-utilities/animated-button'
 import { PersianPublishedArticlesData } from '@/data/persian-published-articles-data'
 import { CompaniesData } from '@/data/companies-data'
@@ -30,7 +32,10 @@ import Card from '@/components/user-interface-utilities/card'
 const About = ({
   companies,
   education
-}) => {
+}: {
+  companies: Companies,
+  education: EducationFacilities
+}): JSX.Element => {
 
   const { colorMode } = useColorMode()
 

@@ -9,9 +9,9 @@ import {
 } from '@chakra-ui/react'
 import { MotionBox } from '@/components/user-interface-utilities/chakra-factory'
 import { CardTransition } from '@/components/user-interface-utilities/transitions'
-import CardProps from '@/types/card-props'
+import type CardProps from '@/types/card-props'
 
-const Card = (props: CardProps) => {
+const Card = (props: CardProps): JSX.Element => {
   const {
     bg = useColorModeValue('yellowish.100', 'gray.800'),
     logoSize = ['10', '10'],

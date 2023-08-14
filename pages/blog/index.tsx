@@ -24,8 +24,14 @@ import {
 import Meta from '@/components/skeleton/meta'
 import Link from 'next/link'
 import { FaRegHandPointLeft, FaRegHandPointRight } from 'react-icons/fa'
+import { BlogPosts } from '@/types/blog'
 
-function Blog({ enArticles, faArticles }) {
+function Blog({
+  enArticles, faArticles
+}: {
+  enArticles: BlogPosts,
+  faArticles: BlogPosts
+}): JSX.Element {
   return (
     <>
       <Meta

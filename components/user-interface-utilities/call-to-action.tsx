@@ -10,7 +10,7 @@ export const CallToAction = ({ bg, color, children }: {
   bg: string,
   color: string,
   children: PropsWithChildren & ReactNode
-}) => {
+}): JSX.Element => {
   return (
     <Flex
       p='50px 0'

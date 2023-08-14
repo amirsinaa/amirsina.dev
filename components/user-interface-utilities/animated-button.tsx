@@ -1,12 +1,12 @@
 import {
   Button
 } from '@chakra-ui/react'
-import AnimatedButtonProps from '@/types/animated-button-props'
+import type AnimatedButtonProps from '@/types/animated-button-props'
 import { MotionBox } from '@/components/user-interface-utilities/chakra-factory'
 import Link from 'next/link'
 
 
-const AnimatedButton = (props: AnimatedButtonProps) => {
+const AnimatedButton = (props: AnimatedButtonProps): JSX.Element => {
   const { link, icon, buttonColorSchema, bg, width, hoverBackground, text, color, fontSize } = props
   return (
     <MotionBox

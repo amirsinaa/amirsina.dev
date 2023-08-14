@@ -13,7 +13,7 @@ export const Breadcrumb = ({
 }: {
   route: string
   query?: string
-}) => {
+}): JSX.Element => {
   const url = route.split("/")
   const lang = url[2];
   const isArticle = typeof query === 'undefined' ? false : true;

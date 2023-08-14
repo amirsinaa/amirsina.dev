@@ -15,7 +15,7 @@ const iconProps = {
   isRound: true
 }
 
-const Footer = () => {
+const Footer = (): JSX.Element => {
   return (
     <Stack
       as='footer'

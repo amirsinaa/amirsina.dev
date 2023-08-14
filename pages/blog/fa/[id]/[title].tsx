@@ -26,8 +26,9 @@ import { MDXRemote } from 'next-mdx-remote'
 import rehypePrism from 'rehype-prism-plus'
 import { useScroll } from 'framer-motion'
 import { useRouter } from 'next/router'
+import type { Post } from '@/types/blog'
 
-function Blog({ data }) {
+function Blog({ data }: { data: Post }): JSX.Element {
   const router = useRouter();
   const { asPath, route } = router;
   const { scrollYProgress } = useScroll();

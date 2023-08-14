@@ -2,10 +2,10 @@ import ColorModeSwitcher from '@/components/user-interface-utilities/color-mode-
 import { Box, useColorModeValue } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 import NavbarMenu from './navbar-menu'
-import { Fragment } from 'react'
+import { Fragment, PropsWithChildren } from 'react'
 import Footer from './footer'
 
-function AppLayout(props) {
+function AppLayout(props: PropsWithChildren): JSX.Element {
   const router = useRouter()
   return (
     <Fragment>

@@ -1,10 +1,9 @@
-export interface SkillType {
+export type SkillType = {
+  id: number | string
   name: string
   link: string
   image: string
   type: string
 }
 
-export default interface SkillsProps {
-  skills: skill[]
-}
+export type SkillsProps = SkillType[]

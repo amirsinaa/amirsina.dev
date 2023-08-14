@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { MetaInfo } from '@/types/meta'
+import type { MetaInfo } from '@/types/meta'
 
 const Meta = ({ title, keywords, description, image, type, locale, url, handle, siteName }: MetaInfo): JSX.Element => {
   return (

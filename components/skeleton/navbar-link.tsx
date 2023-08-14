@@ -3,9 +3,9 @@ import {
   Text
 } from '@chakra-ui/react'
 import Link from 'next/link'
-import { NavbarLinkProps } from '@/types/navbar'
+import type { NavbarLinkProps } from '@/types/navbar'
 
-export default function NavbarLink(props: NavbarLinkProps) {
+export default function NavbarLink(props: NavbarLinkProps): JSX.Element {
   return (
     <Link
       href={props.path}

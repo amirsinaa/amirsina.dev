@@ -18,8 +18,9 @@ import Link from 'next/link'
 import { Breadcrumb } from '@/components/blog/breadcrumb'
 import { useRouter } from 'next/router'
 import { GoBackButton } from '@/components/user-interface-utilities/go-back-button'
+import { BlogPosts } from '@/types/blog'
 
-function PersianBlogPosts({ faArticles }) {
+function PersianBlogPosts({ faArticles }: { faArticles: BlogPosts }): JSX.Element {
   const router = useRouter();
   const { route } = router
   return (

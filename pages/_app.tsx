@@ -5,7 +5,7 @@ import { AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/router'
 import { AppProps } from 'next/app'
 
-function Application({ Component, pageProps }: AppProps) {
+function Application({ Component, pageProps }: AppProps): JSX.Element {
   const router = useRouter()
 
   return (

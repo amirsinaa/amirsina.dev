@@ -1,4 +1,4 @@
-export function blogPostRedirect(route, title, slug: string) {
+export function blogPostRedirect(route: string, title: string, slug: string): unknown {
   if (title !== route && !!title) {
     return {
       redirect: {

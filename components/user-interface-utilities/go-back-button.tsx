@@ -2,9 +2,10 @@
 import {
   Button
 } from '@chakra-ui/react'
+import { NextRouter } from 'next/router'
 import { BsArrowLeft } from 'react-icons/bs'
 
-export const GoBackButton = ({ routerInstance }) => {
+export const GoBackButton = ({ routerInstance }: { routerInstance: NextRouter }): JSX.Element => {
   return (
     <Button
       onClick={() => routerInstance.back()}

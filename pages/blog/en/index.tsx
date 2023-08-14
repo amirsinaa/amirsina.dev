@@ -18,8 +18,9 @@ import { FaRegHandPointRight } from 'react-icons/fa'
 import { Breadcrumb } from '@/components/blog/breadcrumb'
 import { useRouter } from 'next/router'
 import { GoBackButton } from '@/components/user-interface-utilities/go-back-button'
+import { BlogPosts } from '@/types/blog'
 
-function EnglishBlogPosts({ enArticles }) {
+function EnglishBlogPosts({ enArticles }: { enArticles: BlogPosts }): JSX.Element {
   const router = useRouter();
   const { route } = router;
   return (

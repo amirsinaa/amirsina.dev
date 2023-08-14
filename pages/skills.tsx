@@ -13,9 +13,17 @@ import PageLayout from '@/components/skeleton/page-layout'
 import { SkillsCollection, SkillsCurrentlyLearningCollection } from '@/data/skills-data'
 import { BsWrench, BsKeyboardFill } from 'react-icons/bs'
 import Skills from '@/components/skills'
+import type { SkillsProps } from '@/types/skill'
 
 
-const ProjectsPage = ({ skills, learning }) => {
+const ProjectsPage = (
+  {
+    skills,
+    learning
+  }: {
+    skills: SkillsProps,
+    learning: SkillsProps
+  }): JSX.Element => {
   return (
     <PageLayout
       title='Skills'

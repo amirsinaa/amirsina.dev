@@ -1,16 +1,14 @@
 import {
-  useColorMode,
   HStack,
   Tag
 } from '@chakra-ui/react'
 import Card from '@/components/user-interface-utilities/card'
 import { VStack, SimpleGrid } from '@chakra-ui/react'
 import { LayoutGroup } from 'framer-motion'
-import ProjectsProps from '@/types/project'
+import type ProjectsProps from '@/types/project'
 import Link from 'next/link'
 
 const Projects = ({ projects }: ProjectsProps) => {
-  const { colorMode } = useColorMode()
   return (
     <VStack mx={2} align='start' spacing={8}>
       <LayoutGroup>

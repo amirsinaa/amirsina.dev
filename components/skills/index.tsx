@@ -9,10 +9,10 @@ import {
 import { MotionBox } from '@/components/user-interface-utilities/chakra-factory'
 import { container } from '@/components/user-interface-utilities/transitions'
 import Card from '@/components/user-interface-utilities/card'
-import SkillsProps from '@/types/skill'
+import type { SkillsProps } from '@/types/skill'
 import Link from 'next/link'
 
-const Skills = ({ skills }: SkillsProps) => {
+const Skills = ({ skills }: { skills: SkillsProps }) => {
   const { colorMode } = useColorMode()
   return (
     <Box

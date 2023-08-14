@@ -19,7 +19,7 @@ import { MenuLinks } from '@/data/menu-links'
 import NavbarLink from './navbar-link'
 import { MotionBox } from '../user-interface-utilities/chakra-factory'
 
-export default function NavbarMenu() {
+export default function NavbarMenu(): JSX.Element {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const { scrollY } = useScroll();
   const [isSticky, setIsSticky] = useState(false);

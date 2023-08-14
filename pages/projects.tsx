@@ -7,6 +7,7 @@ import {
   Heading,
   Flex
 } from '@chakra-ui/react'
+import type ProjectsProps from '@/types/project'
 import { BsCodeSlash } from 'react-icons/bs'
 import {
   PageSlideFade,
@@ -14,7 +15,7 @@ import {
 } from '@/components/user-interface-utilities/transitions'
 import PageLayout from '@/components/skeleton/page-layout'
 
-const ProjectsPage = ({ projects }) => {
+const ProjectsPage = ({ projects }: ProjectsProps): JSX.Element => {
   return (
     <PageLayout
       title='Projects'

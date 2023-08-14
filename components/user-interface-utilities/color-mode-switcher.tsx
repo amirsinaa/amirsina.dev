@@ -3,7 +3,7 @@ import { AnimatePresence } from 'framer-motion'
 import { MotionBox } from './chakra-factory'
 import useSound from 'use-sound'
 
-const ColorModeSwitcher = () => {
+const ColorModeSwitcher = (): JSX.Element => {
   const { toggleColorMode } = useColorMode()
   const mode = useColorModeValue('dark', 'light')
 

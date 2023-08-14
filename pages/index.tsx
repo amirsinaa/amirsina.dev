@@ -15,9 +15,10 @@ import PageLayout from '@/components/skeleton/page-layout'
 import { BsWrench, BsCodeSlash } from 'react-icons/bs'
 import { VscPerson } from 'react-icons/vsc'
 import { VscBook } from 'react-icons/vsc'
+import type { Person } from '@/types/person'
 import SiteConfig from '@/configs/index'
 
-export default function Index({ authorsName, authorsBio }) {
+export default function Index({ authorsName, authorsBio }: Person): JSX.Element {
   return (
     <PageLayout title='Amirsina Shadkami - Frontend Developer'>
       <PageSlideFade>
