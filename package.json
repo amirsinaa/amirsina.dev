@@ -1,6 +1,6 @@
 {
 	"name": "amirsina.dev",
-	"version": "2.0.1",
+	"version": "2.0.2",
 	"description": "www.amirsina.dev",
 	"author": "Amirsina Shadkami <amirsina23@gmail.com> (https://amirsina.netlify.dev)",
 	"repository": {
@@ -9,8 +9,7 @@
 	},
 	"scripts": {
 		"dev": "next dev",
-		"build": "next build",
-		"export": "next export"
+		"build": "next build && next export"
 	},
 	"dependencies": {
 		"@chakra-ui/react": "^2.5.5",
