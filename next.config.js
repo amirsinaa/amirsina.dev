@@ -5,18 +5,7 @@ const withMDX = require('@next/mdx')({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	headers: async () => [
-		{
-			source: '/:all*(svg|jpg|png|woff|woff2)',
-			locale: false,
-			headers: [
-				{
-					key: 'Cache-Control',
-					value: 'public, max-age=31536000, stale-while-revalidate',
-				},
-			],
-		},
-	],
+	distDir: 'out',
 	pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
 }
 
