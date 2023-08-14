@@ -17,9 +17,11 @@ import Meta from '@/components/skeleton/meta'
 import Link from 'next/link'
 import { Breadcrumb } from '@/components/blog/breadcrumb'
 import { useRouter } from 'next/router'
+import { GoBackButton } from '@/components/user-interface-utilities/go-back-button'
 
 function PersianBlogPosts({ faArticles }) {
-  const { route } = useRouter();
+  const router = useRouter();
+  const { route } = router
   return (
     <>
       <Meta
@@ -27,6 +29,7 @@ function PersianBlogPosts({ faArticles }) {
         description='پست های آموزشی توسعه نرم افزار های تحت وب'
         keywords='development blog, programming blog, web, frontend, software, engineer,software engineer,front-end Blog,وب,فرانت اند,نرم افزار,'
       />
+      <GoBackButton routerInstance={router} />
       <Breadcrumb route={route} />
 
       <Card borderRadius='xl' marginTop={3} boxShadow='md'>

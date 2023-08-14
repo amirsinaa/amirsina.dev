@@ -17,9 +17,11 @@ import Link from 'next/link'
 import { FaRegHandPointRight } from 'react-icons/fa'
 import { Breadcrumb } from '@/components/blog/breadcrumb'
 import { useRouter } from 'next/router'
+import { GoBackButton } from '@/components/user-interface-utilities/go-back-button'
 
 function EnglishBlogPosts({ enArticles }) {
-  const { route } = useRouter();
+  const router = useRouter();
+  const { route } = router;
   return (
     <>
       <Meta
@@ -27,6 +29,7 @@ function EnglishBlogPosts({ enArticles }) {
         description='informative and detailed frontend development articles and guides'
         keywords='development blog, programming blog, web, frontend, software, engineer,software engineer,front-end blog'
       />
+      <GoBackButton routerInstance={router} />
       <Breadcrumb route={route} />
       <Card borderRadius='xl' marginTop={3} boxShadow='md'>
         <CardBody>

@@ -36,7 +36,7 @@ const Skills = ({ skills }: SkillsProps) => {
               spacing={0}
               animate='visible'
             >
-              <SimpleGrid columns={[2, 2, 3, 3, 4]} spacing={4} mt={8}>
+              <SimpleGrid columns={[1, 2, 3, 3, 4]} spacing={4} mt={8}>
                 {skills.map((tool) => (
                   <Link href={tool.link} key={tool.id}>
                     <Card

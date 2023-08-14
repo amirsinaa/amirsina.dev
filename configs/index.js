@@ -1,50 +1,57 @@
 import {
-  FaGithub,
-  FaDev,
-  FaLinkedin,
-  FaQuora,
-  FaTwitter,
-  FaMedium
+	FaGithub,
+	FaDev,
+	FaLinkedin,
+	FaQuora,
+	FaTwitter,
+	FaMedium,
 } from 'react-icons/fa'
 import { FiMail } from 'react-icons/fi'
 
 const SiteConfig = {
-  copyright: `Copyright © ${new Date().getFullYear()} Amirsina Shadkami. All Rights Reserved.`,
-  author: {
-    name: 'Amirsina Shadkami',
-    accounts: [
-      {
-        url: 'https://github.com/amirsinaa',
-        label: 'Github Account',
-        type: 'gray',
-        icon: <FaGithub />
-      },
-      {
-        url: 'https://twitter.com/amirsiinaa',
-        label: 'Twitter Account',
-        type: 'twitter',
-        icon: <FaTwitter />
-      },
-      {
-        url: 'https://dev.to/amirsina/',
-        label: 'Dev Account',
-        type: 'gray',
-        icon: <FaDev />
-      },
-      {
-        url: 'https://www.linkedin.com/in/amirsina-shadkami/',
-        label: 'LinkedIn Account',
-        type: 'linkedin',
-        icon: <FaLinkedin />
-      },
-      {
-        url: 'https://medium.com/@amirsinaa',
-        label: 'Medium Account',
-        type: 'gray',
-        icon: <FaMedium />
-      }
-    ]
-  }
+	copyright: `Copyright © ${new Date().getFullYear()} Amirsina Shadkami. All Rights Reserved.`,
+	author: {
+		name: 'Amirsina Shadkami',
+		about:
+			'I am an accomplished Front-end developer with extensive experience in (JavaScript, Reactjs), modern web paradigms  (e.g., PWA, JAMstack, SPA, MPA) , widely used frameworks and some other various modern web technologies and tools.',
+		accounts: [
+			{
+				id: 'authors-social-1',
+				url: 'https://github.com/amirsinaa',
+				label: 'Github Account',
+				type: 'gray',
+				icon: <FaGithub />,
+			},
+			{
+				id: 'authors-social-2',
+				url: 'https://twitter.com/amirsiinaa',
+				label: 'Twitter Account',
+				type: 'twitter',
+				icon: <FaTwitter />,
+			},
+			{
+				id: 'authors-social-3',
+				url: 'https://dev.to/amirsina/',
+				label: 'Dev Account',
+				type: 'gray',
+				icon: <FaDev />,
+			},
+			{
+				id: 'authors-social-4',
+				url: 'https://www.linkedin.com/in/amirsina-shadkami/',
+				label: 'LinkedIn Account',
+				type: 'linkedin',
+				icon: <FaLinkedin />,
+			},
+			{
+				id: 'authors-social-5',
+				url: 'https://medium.com/@amirsinaa',
+				label: 'Medium Account',
+				type: 'gray',
+				icon: <FaMedium />,
+			},
+		],
+	},
 }
 
 export default SiteConfig

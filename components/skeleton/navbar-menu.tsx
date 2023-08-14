@@ -51,7 +51,7 @@ export default function NavbarMenu() {
       justifyContent='center'
       alignItems='center'
       alignSelf='center'
-      w={['90%', '90%', '90%', '60%']}
+      w={['90%', '90%', '90%', '63%']}
       as='header'
       variants={
         {
