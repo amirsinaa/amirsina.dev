@@ -70,8 +70,7 @@ export async function getStaticProps() {
   return {
     props: {
       enArticles
-    },
-    revalidate: 500,
+    }
   }
 }
 

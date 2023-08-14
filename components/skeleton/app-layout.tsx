@@ -1,9 +1,17 @@
 import ColorModeSwitcher from '@/components/user-interface-utilities/color-mode-switcher'
 import { Box, useColorModeValue } from '@chakra-ui/react'
+import { Fragment, PropsWithChildren } from 'react'
+import { Roboto } from 'next/font/google'
 import { useRouter } from 'next/router'
 import NavbarMenu from './navbar-menu'
-import { Fragment, PropsWithChildren } from 'react'
 import Footer from './footer'
+
+
+const roboto = Roboto({
+  weight: '400',
+  subsets: ['latin'],
+})
+
 
 function AppLayout(props: PropsWithChildren): JSX.Element {
   const router = useRouter()
@@ -11,6 +19,7 @@ function AppLayout(props: PropsWithChildren): JSX.Element {
     <Fragment>
       {router.pathname === '/' ? null : <NavbarMenu />}
       <Box
+        className={roboto.className}
         as='main'
         textAlign='center'
         fontSize='lg'

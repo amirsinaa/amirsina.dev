@@ -165,8 +165,7 @@ export async function getStaticProps() {
     props: {
       enArticles,
       faArticles
-    },
-    revalidate: 500,
+    }
   }
 }
 

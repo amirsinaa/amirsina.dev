@@ -71,8 +71,7 @@ export async function getStaticProps() {
   return {
     props: {
       faArticles
-    },
-    revalidate: 500,
+    }
   }
 }
 
