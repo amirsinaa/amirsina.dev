@@ -99,7 +99,8 @@ export async function getStaticProps({ params }) {
         readFrom: article.data.readFrom,
         host: JSON.stringify(params)
       },
-    }
+    },
+    revalidate: 500,
   }
 }
 
@@ -114,7 +115,7 @@ export async function getStaticPaths() {
 
   const paths = [...faPaths]
 
-  return { paths, fallback: false }
+  return { paths, fallback: 'blocking' }
 }
 
 export default Blog
