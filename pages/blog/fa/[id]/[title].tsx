@@ -1,3 +1,11 @@
+import {
+  useColorModeValue,
+  Box
+} from '@chakra-ui/react'
+import { GoBackButton } from '@/components/user-interface-utilities/go-back-button'
+import AnimatedButton from '@/components/user-interface-utilities/animated-button'
+import { VscBook } from 'react-icons/vsc'
+import { CallToAction } from '@/components/user-interface-utilities/call-to-action'
 import { MotionBox } from '@/components/user-interface-utilities/chakra-factory'
 import {
   filterArticleSource
@@ -20,14 +28,15 @@ import { useScroll } from 'framer-motion'
 import { useRouter } from 'next/router'
 
 function Blog({ data }) {
-  const { asPath, route } = useRouter();
+  const router = useRouter();
+  const { asPath, route } = router;
   const { scrollYProgress } = useScroll();
 
   return (
     <>
       <Meta
         title={data.title}
-        description={data.title}
+        description={data.summary}
         keywords={data.keywords}
         locale='fa'
         url={`${BLOG_BASE_URL}${asPath}`}
@@ -37,6 +46,7 @@ function Blog({ data }) {
         className='progress-bar'
         style={{ scaleX: scrollYProgress }}
       />
+      <GoBackButton routerInstance={router} />
       <Breadcrumb route={route} query={String(data.title)} />
       <MotionBox
         className='blog-post'
@@ -46,7 +56,21 @@ function Blog({ data }) {
         dir={data.language === 'fa' ? 'rtl' : 'ltr'}
         textAlign={data.language === 'fa' ? 'right' : 'left'}
       >
+        {data.summary}
+        <hr />
         <MDXRemote {...data.markdown} />
+        <hr />
+        <CallToAction color='gray.900' bg='yellowish.100'>
+          <Box as='h3' fontWeight='bolder' color={useColorModeValue('gray.900', 'white')} fontSize='33px' mt='-5px' display='flex'>این مقاله ابتدا در ویرگول نوشته شده</Box>
+          {data.readFrom.map(item => <AnimatedButton
+            key={item.id}
+            link={item.articleLink}
+            icon={<VscBook />}
+            bg='deepBlueSea.100'
+            color='white'
+            text={` بخوانید در ${item.articleSource} `}
+          />)}
+        </CallToAction>
       </MotionBox>
     </>
   )
@@ -69,7 +93,9 @@ export async function getStaticProps({ params }) {
         id: article.data.id,
         title: article.data.title,
         language: article.data.language,
+        summary: article.data.summary,
         markdown: JSON.parse(JSON.stringify(articleContent)),
+        readFrom: article.data.readFrom,
         host: JSON.stringify(params)
       },
     },
