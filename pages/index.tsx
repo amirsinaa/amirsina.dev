@@ -15,20 +15,22 @@ import PageLayout from '@/components/skeleton/page-layout'
 import { BsWrench, BsCodeSlash } from 'react-icons/bs'
 import { VscPerson } from 'react-icons/vsc'
 import { VscBook } from 'react-icons/vsc'
+import SiteConfig from '@/configs/index'
 
-export default function Index() {
+export default function Index({ authorsName, authorsBio }) {
   return (
     <PageLayout title='Amirsina Shadkami - Frontend Developer'>
       <PageSlideFade>
         <StaggerChildren>
           <Flex
-            mx={10}
+            mx={['1em', '0', '0']}
             pos='relative'
             direction={['column', 'column', 'row']}
             pt='10%'
             mt='10%'
           >
             <MotionBox
+              pos='relative'
               initial={{
                 opacity: 0,
                 translateY: 150
@@ -43,12 +45,22 @@ export default function Index() {
             >
               <Avatar
                 size={'3xl'}
-                src={''}
-                pos={['initial', 'absolute']}
-                top='-30%'
-                left='35%'
-                zIndex={99}
-                display={['block']}
+                src={'/assets/images/panir/1.jpeg'}
+                width={300}
+                height={300}
+                border='3px solid'
+                color='yellowish.100'
+                boxShadow='2xl'
+                position='absolute'
+                overflowX='hidden'
+                display={['none', 'none', 'flex', 'flex']}
+                flexDir={'column'}
+                zIndex='99'
+                transform='translate(150%,-70%)'
+                p={0.5}
+                justifyContent='center'
+                alignItems='center'
+                alignSelf='center'
               />
             </MotionBox>
             <MotionBox
@@ -100,7 +112,7 @@ export default function Index() {
                     fontWeight: 'bold'
                   }}
                 >
-                  My name is Amirsina Shadkami.
+                  {`My name is ${authorsName}.`}
                 </Highlight>
               </Box>
               <Box
@@ -119,17 +131,18 @@ export default function Index() {
                     bg: 'yellowish.100'
                   }}
                 >
-                  I&aposm an accomplished Front-end developer with extensive experience in (JavaScript, Reactjs), modern web paradigms  (e.g., PWA, JAMstack) , widely used frameworks and some other various modern web technologies and tools.
+                  {String(authorsBio)}
                 </Highlight>
               </Box>
             </MotionBox>
           </Flex>
           <Flex
-            mx={12}
             pos='relative'
             direction={['row']}
             pt={10}
             px={0}
+            mb={10}
+            mx={['1em', '0', '0']}
           >
             <MotionBox
               opacity='0'
@@ -153,32 +166,43 @@ export default function Index() {
                 justify='space-evenly'
               >
                 <AnimatedButton
+                  fontSize='21px'
                   link='/about'
-                  width='25%'
+                  width='50%'
                   icon={<VscPerson />}
                   buttonColorSchema='purple'
                   hoverBackground='purple'
                   text='About me'
                 />
                 <AnimatedButton
+                  fontSize='21px'
                   link='/blog'
-                  width='25%'
+                  width='50%'
                   icon={<VscBook />}
                   buttonColorSchema='orange'
                   hoverBackground='darkOrange'
                   text='Blog'
                 />
+              </Stack>
+              <Stack
+                direction={['column', 'column', 'column', 'row']}
+                w='100%'
+                my={3}
+                justify='space-evenly'
+              >
                 <AnimatedButton
+                  fontSize='21px'
                   link='/skills'
-                  width='25%'
+                  width='50%'
                   icon={<BsWrench />}
                   buttonColorSchema='yellow'
                   hoverBackground='gold'
                   text='My Skills'
                 />
                 <AnimatedButton
+                  fontSize='21px'
                   link='/projects'
-                  width='25%'
+                  width='50%'
                   icon={<BsCodeSlash />}
                   buttonColorSchema='pink'
                   hoverBackground='hotpink'
@@ -191,4 +215,15 @@ export default function Index() {
       </PageSlideFade>
     </PageLayout>
   )
+}
+
+
+export function getStaticProps() {
+  const author = SiteConfig.author
+  return {
+    props: {
+      authorsName: author.name,
+      authorsBio: author.about
+    }
+  }
 }
