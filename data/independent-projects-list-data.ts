@@ -58,6 +58,35 @@ export const IndependentProjectsListData = [
     ]
   },
   {
+    id: 902,
+    title: 'Apex Resources Inc',
+    logo: '/assets/images/projects/apex.png',
+    link: 'http://www.apexresource.us/',
+    description: `Apex Resources Inc. is committed to maximizing the performance of most critical resources through development projects, as well as sourcing and distributing agricultural commodities, raw materials, medical devices, petroleum products, and LED lights.`,
+    technologies: [
+      {
+        id: 9021,
+        colorMode: 'maroon',
+        name: 'Gulpjs'
+      },
+      {
+        id: 9022,
+        colorMode: 'hotpink',
+        name: 'Sass'
+      },
+      {
+        id: 9023,
+        colorMode: 'darkorange',
+        name: 'HTML5'
+      },
+      {
+        id: 9024,
+        colorMode: 'greenviolet',
+        name: 'Bootstrap'
+      }
+    ]
+  },
+  {
     id: 909,
     title: 'VSCotion',
     logo: '/assets/images/projects/vscotion.png',
@@ -137,35 +166,6 @@ export const IndependentProjectsListData = [
         colorMode: 'chakraUI',
         name: 'ChakraUI'
       },
-    ]
-  },
-  {
-    id: 902,
-    title: 'Apex Resources Inc',
-    logo: '/assets/images/projects/apex.png',
-    link: 'http://www.apexresource.us/',
-    description: `Apex Resources Inc. is committed to maximizing the performance of most critical resources through development projects, as well as sourcing and distributing agricultural commodities, raw materials, medical devices, petroleum products, and LED lights.`,
-    technologies: [
-      {
-        id: 9021,
-        colorMode: 'maroon',
-        name: 'Gulpjs'
-      },
-      {
-        id: 9022,
-        colorMode: 'hotpink',
-        name: 'Sass'
-      },
-      {
-        id: 9023,
-        colorMode: 'darkorange',
-        name: 'HTML5'
-      },
-      {
-        id: 9024,
-        colorMode: 'greenviolet',
-        name: 'Bootstrap'
-      }
     ]
   },
   {
