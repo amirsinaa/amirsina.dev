@@ -2,10 +2,14 @@ export const EnglishPublishedArticlesData = [
   {
     id: '1',
     language: 'en',
-    keywords: '',
+    keywords: 'DOM,CSS,frontend development,Css selectors',
     summary: 'Learn the power of CSS selectors and how to target specific elements on your web page in this blog post.',
     title: 'Selectors in CSS once and for all!',
-    markdown: ``,
+    markdown: `
+
+    # This post will be re written in this blog soon, till then read it from Medium or Dev.to
+
+    `,
     readFrom: [
       {
         id: 12221,
