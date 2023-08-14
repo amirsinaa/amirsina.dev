@@ -1,11 +1,24 @@
-module.exports = {
-	webpack: (config, { isServer }) => {
-		if (!isServer) {
-			config.resolve.fallback.fs = false
-			config.resolve.fallback.net = false
-			config.resolve.fallback.tls = false
-			config.resolve.fallback.child_process = false
-		}
-		return config
-	},
+const withMDX = require('@next/mdx')({
+	extension: /\.mdx?$/,
+	options: {},
+})
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+	headers: async () => [
+		{
+			source: '/:all*(svg|jpg|png|woff|woff2)',
+			locale: false,
+			headers: [
+				{
+					key: 'Cache-Control',
+					value: 'public, max-age=31536000, stale-while-revalidate',
+				},
+			],
+		},
+	],
+	pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
 }
+
+// Merge MDX config with Next.js config
+module.exports = withMDX(nextConfig)

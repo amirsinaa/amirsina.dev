@@ -1,29 +1,53 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "baseUrl": ".",
-    "paths": {
-      "*": ["/*"],
-      "components/*": ["components/*"],
-      "lib/*": ["lib/*"],
-      "data/*": ["data/*"],
-      "pages/*": ["pages/*"],
-      "config/*": ["config/*"],
-      "public/*": ["public/*"],
-    }
-  },
-  "include": ["next-env.d.ts", "**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+	"compilerOptions": {
+		"target": "es5",
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"allowJs": true,
+		"skipLibCheck": true,
+		"strict": false,
+		"noImplicitAny": false,
+		"allowSyntheticDefaultImports": true,
+		"forceConsistentCasingInFileNames": true,
+		"noEmit": true,
+		"strictBindCallApply": false,
+		"strictNullChecks": false,
+		"strictFunctionTypes": false,
+		"strictPropertyInitialization": false,
+		"alwaysStrict": false,
+		"esModuleInterop": true,
+		"module": "esnext",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"baseUrl": ".",
+		"jsx": "preserve",
+		"paths": {
+			"@/lib/*": ["./lib/*"],
+			"@/pages/*": ["./pages/*"],
+			"@/components/*": ["./components/*"],
+			"@/hooks/*": ["./hooks/*"],
+			"@/configs/*": ["./configs/*"],
+			"@/types/*": ["types/*"],
+			"@/services/*": ["./services/*"],
+			"@/data/*": ["./data/*"],
+			"@/public/*": ["./public/*"],
+			"@/constants/*": ["./constants/*"]
+		},
+		"incremental": true,
+		"plugins": [
+			{
+				"name": "next"
+			}
+		]
+	},
+	"exclude": ["node_modules"],
+	"include": [
+		"next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		"configs/index.js",
+		".next/types/**/*.ts",
+		"pages/blog/[title]/index.mdx",
+		"pages/blog/[id]/index.mdx"
+	]
 }
