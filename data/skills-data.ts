@@ -55,9 +55,9 @@ export const SkillsCollection = [
   },
   {
     id: 1010,
-    name: 'Bootstrap',
-    link: 'https://getbootstrap.com/',
-    image: '/assets/images/skills/bootstrap.png'
+    name: 'Treejs',
+    link: '',
+    image: '/assets/images/skills/tree.png'
   },
   {
     id: 1011,
@@ -103,15 +103,15 @@ export const SkillsCollection = [
   },
   {
     id: 1018,
-    name: 'PostCss',
-    link: 'https://postcss.org/',
-    image: '/assets/images/skills/pcss.png'
+    name: 'Tanstack React query',
+    link: '',
+    image: '/assets/images/skills/trq.png'
   },
   {
     id: 1019,
-    name: 'Jamstack',
-    link: 'https://jamstack.org/',
-    image: '/assets/images/skills/jamstack.png'
+    name: 'MUI',
+    link: '',
+    image: '/assets/images/skills/mui.png'
   },
   {
     id: 1020,
@@ -143,4 +143,32 @@ export const SkillsCollection = [
     link: 'https://pm2.keymetrics.io/',
     image: '/assets/images/skills/pm2.png'
   }
+]
+
+
+export const SkillsCurrentlyLearningCollection = [
+  {
+    id: 'sclc-1',
+    name: 'Rxjs',
+    link: '#',
+    image: '/assets/images/skills/sclc/rx.png',
+  },
+  {
+    id: 'sclc-2',
+    name: 'Laravel',
+    link: '#',
+    image: '/assets/images/skills/sclc/laravel.png',
+  },
+  {
+    id: 'sclc-3',
+    name: 'Nestjs',
+    link: '#',
+    image: '/assets/images/skills/sclc/nest.png',
+  },
+  {
+    id: 'sclc-4',
+    name: 'Go lang',
+    link: '3',
+    image: '/assets/images/skills/sclc/go.png',
+  },
 ]

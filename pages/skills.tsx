@@ -10,12 +10,12 @@ import {
 } from '@/components/user-interface-utilities/transitions'
 import { MotionBox } from '@/components/user-interface-utilities/chakra-factory'
 import PageLayout from '@/components/skeleton/page-layout'
-import { SkillsCollection } from '@/data/skills-data'
-import { BsWrench } from 'react-icons/bs'
+import { SkillsCollection, SkillsCurrentlyLearningCollection } from '@/data/skills-data'
+import { BsWrench, BsKeyboardFill } from 'react-icons/bs'
 import Skills from '@/components/skills'
 
 
-const ProjectsPage = ({ skills }) => {
+const ProjectsPage = ({ skills, learning }) => {
   return (
     <PageLayout
       title='Skills'
@@ -42,6 +42,25 @@ const ProjectsPage = ({ skills }) => {
             </MotionBox>
             <Skills skills={skills} />
           </Box>
+          <Box
+            m={['6em 0']}
+            w={['90%', '100%', '100%']}
+            px={['0', '0', '2rem']}
+          >
+            <MotionBox>
+              <Heading>
+                <Flex alignItems='center'>
+                  <Box as='strong' fontWeight='600'>
+                    Currently learning
+                  </Box>
+                  <Stack pl={3}>
+                    <Box as={BsKeyboardFill} size='25px' />
+                  </Stack>
+                </Flex>
+              </Heading>
+            </MotionBox>
+            <Skills skills={learning} />
+          </Box>
         </StaggerChildren>
       </PageSlideFade>
     </PageLayout>
@@ -50,9 +69,11 @@ const ProjectsPage = ({ skills }) => {
 
 export function getStaticProps() {
   const skills = SkillsCollection
+  const learning = SkillsCurrentlyLearningCollection
   return {
     props: {
-      skills
+      skills,
+      learning
     }
   }
 }
