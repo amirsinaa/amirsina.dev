@@ -27,6 +27,7 @@ import { useRouter } from 'next/router'
 import { CallToAction } from '@/components/user-interface-utilities/call-to-action'
 import { GoBackButton } from '@/components/user-interface-utilities/go-back-button'
 import type { Post } from '@/types/blog'
+import BlogPostSemanticSchema from '@/components/blog/blog-post-semantic-schema'
 
 function Blog({ data }: { data: Post }): JSX.Element {
   const router = useRouter();
@@ -35,6 +36,7 @@ function Blog({ data }: { data: Post }): JSX.Element {
 
   return (
     <>
+      <BlogPostSemanticSchema data={data} />
       <Meta
         title={data.title}
         description={data.summary}

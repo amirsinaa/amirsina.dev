@@ -27,6 +27,7 @@ import rehypePrism from 'rehype-prism-plus'
 import { useScroll } from 'framer-motion'
 import { useRouter } from 'next/router'
 import type { Post } from '@/types/blog'
+import BlogPostSemanticSchema from '@/components/blog/blog-post-semantic-schema'
 
 function Blog({ data }: { data: Post }): JSX.Element {
   const router = useRouter();
@@ -35,6 +36,7 @@ function Blog({ data }: { data: Post }): JSX.Element {
 
   return (
     <>
+      <BlogPostSemanticSchema data={data} />
       <Meta
         title={data.title}
         description={data.summary}
