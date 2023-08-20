@@ -51,7 +51,8 @@ export default function NavbarMenu(): JSX.Element {
       justifyContent='center'
       alignItems='center'
       alignSelf='center'
-      w={['90%', '90%', '90%', '63%']}
+      w={['90%', '90%', '90%', '85%', '80%', '75%', '70%']}
+      mx='auto'
       as='header'
       variants={
         {
