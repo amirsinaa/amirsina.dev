@@ -1,5 +1,39 @@
 export const IndependentProjectsListData = [
   {
+    id: 333666,
+    title: 'Zigap',
+    logo: '/assets/images/projects/zigap.png',
+    link: 'https://app.zigap.ir',
+    description: `Zigap is an assistant powered by the most powerful artificial intelligence engines with massive amounts of data.`,
+    technologies: [
+      {
+        id: 9011,
+        colorMode: 'red',
+        name: 'SignalR,Websocket'
+      },
+      {
+        id: 90723,
+        colorMode: 'black',
+        name: 'Nextjs'
+      },
+      {
+        id: 90733,
+        colorMode: 'dirtyskyblue',
+        name: 'Typescript'
+      },
+      {
+        id: 90739,
+        colorMode: 'hotpink',
+        name: 'React Query'
+      },
+      {
+        id: 90743,
+        colorMode: 'chakraUI',
+        name: 'TailwindCss'
+      },
+    ]
+  },
+  {
     id: 901,
     title: 'Midas Global Logistics',
     logo: '/assets/images/projects/midas.png',
@@ -192,54 +226,6 @@ export const IndependentProjectsListData = [
       },
       {
         id: 9034,
-        colorMode: 'greenviolet',
-        name: 'Bootstrap'
-      }
-    ]
-  },
-  {
-    id: 904,
-    title: 'Renaultyar shop',
-    logo: '/assets/images/projects/Renaultyar.png',
-    link: 'https://renaultyar.com/',
-    description: `Renaultyar (Land Forerunner Trade) has been established with the aim of facilitating the process of purchasing spare parts, providing original and standard parts and distinctive services, which results in increasing customer satisfaction.`,
-    technologies: [
-      {
-        id: 9041,
-        colorMode: 'black',
-        name: 'Prestashop'
-      },
-      {
-        id: 9042,
-        colorMode: 'gold',
-        name: 'Vanilla Javascript'
-      },
-      {
-        id: 9043,
-        colorMode: 'greenviolet',
-        name: 'Bootstrap'
-      }
-    ]
-  },
-  {
-    id: 905,
-    title: 'Irankoran',
-    logo: '/assets/images/projects/irankoran.png',
-    link: 'http://irankoran.ir/',
-    description: `irankoran project in 2017. , With the financial support of the German Ministry of Education, started working at the Berlin-Brandenburg Academy of Sciences. The main goal of the project is digital research and publication of manuscripts in the Quran that are kept in museums, libraries and public or private collections in Iran.`,
-    technologies: [
-      {
-        id: 9051,
-        colorMode: 'skygreen',
-        name: 'Yii2'
-      },
-      {
-        id: 9052,
-        colorMode: 'gold',
-        name: ' Vanilla Javascript'
-      },
-      {
-        id: 9053,
         colorMode: 'greenviolet',
         name: 'Bootstrap'
       }
