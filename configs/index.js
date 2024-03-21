@@ -2,11 +2,9 @@ import {
 	FaGithub,
 	FaDev,
 	FaLinkedin,
-	FaQuora,
 	FaTwitter,
 	FaMedium,
 } from 'react-icons/fa'
-import { FiMail } from 'react-icons/fi'
 
 const SiteConfig = {
 	copyright: `Copyright © ${new Date().getFullYear()} Amirsina Shadkami. All Rights Reserved.`,

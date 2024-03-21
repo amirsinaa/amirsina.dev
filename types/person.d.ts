@@ -1,4 +1,4 @@
 export type Person = {
-  authorsName: string,
-  authorsBio: string
+	authorsName: string
+	authorsBio: string
 }
